@@ -1,5 +1,5 @@
 % -- Makes a regular grid from the  image of stereographic projection using 2d linear interpolation
-function [xx yy] = interp_grid( x,y,nx,ny )
+function [xx yy] = interp_grid( x,y,z,nx,ny )
 % xx	interpolated x-coordinates
 % yy	interpolated y-coordinates
 % x	x-coordinates of stereographic projection
@@ -11,7 +11,10 @@ function [xx yy] = interp_grid( x,y,nx,ny )
 %    /       \
 %    `-_   _-'
 %       `-'
-% Stereographic projection sends longitude lines to rays through the origin on the plane and latitude lines to circles centered at the origin.  
+% Stereographic projection sends longitude lines to rays through the origin
+% on the plane and latitude lines to circles centered at the origin. Hence,
+% we can easily find the coordinates of the largest rectangle that fits
+% inside the region defined by the stereographic projection output. 
 xmin = x(1,1)
 xmax = -xmin
 
@@ -23,4 +26,5 @@ ymax = ymax = y(floor(nny/2),1)
 
 xx = linspace(xmin,xmax,nx)
 yy = linspace(ymin,ymax,ny)
+
 

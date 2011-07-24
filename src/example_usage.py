@@ -1,7 +1,7 @@
 # Here is an example of pre processing NCOM ocean current veloctiy data
-from netcdf_import import ncom_importer
+from netcdf_import import Ncom_importer
 
-importer = ncom_data_importer('ocean_data/NCOM/ncom_glb_sfcurrents_2011060900.nc')
+importer = Ncom_importer('ocean_data/NCOM/ncom_glb_sfcurrents_2011060900.nc')
 vel_data = importer.get_vel_data()
 
 vel_data.frames[0].quiver_plot()
