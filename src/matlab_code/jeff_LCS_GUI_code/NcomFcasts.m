@@ -10,7 +10,7 @@
 %robert.daniels@noaa.gov
 
 Rollback =1;%Rollback number of days (0 = today, 1 = yesterday, etc.)
-sourcedir = '../../ocean_data/NCOM/'%enter path of your source directory for Ncom file here 
+sourcedir = '/%%%%%/'%enter path of your source directory for Ncom file here 
 %Find day of year
 V = date;
 N = datenum(V) - Rollback;
