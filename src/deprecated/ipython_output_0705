@@ -1,0 +1,3758 @@
+Python 2.7.1+ (r271:86832, Apr 11 2011, 18:05:24) 
+Type "copyright", "credits" or "license" for more information.                                                                                                
+                                                                                                                                                              
+IPython 0.10.1 -- An enhanced Interactive Python.                                                                                                             
+?         -> Introduction and overview of IPython's features.                                                                                                 
+%quickref -> Quick reference.                                                                                                                                 
+help      -> Python's own help system.                                                                                                                        
+object?   -> Details about 'object'. ?object also works, ?? prints more.                                                                                      
+                                                                                                                                                              
+In [1]: ne                                                                                                                                                    
+netcdf_global_ocean_export.py   netcdf_global_ocean_export.pyc  next                                                                                          
+                                                                                                                                                              
+In [1]: run netcdf_global_ocean_export.py 
+ 
+In [2]: nf = NcomNetcdf(' 
+Display all 224 possibilities? (y or n)                                                                                                                       
+ArithmeticError                              _ii                                          is                                                                  
+AssertionError                               _iii                                         isinstance                                                          
+AttributeError                               _ip                                          issubclass                                                          
+BaseException                                _oh                                          iter                                                                
+Basemap                                      _sh                                          jobs
+BufferError                                  abs                                          lambda
+BytesWarning                                 all                                          len
+DeprecationWarning                           and                                          license
+EOFError                                     any                                          list
+Ellipsis                                     apply                                        locals
+EnvironmentError                             as                                           long
+Exception                                    assert                                       map
+False                                        basestring                                   max
+FloatingPointError                           bin                                          memoryview
+FutureWarning                                bool                                         min
+GeneratorExit                                break                                        nc
+IOError                                      buffer                                       ncom_glb_sfcurrents_2011060600
+ImportError                                  bytearray                                    ncom_glb_sfcurrents_2011060600.nc
+ImportWarning                                bytes                                        ncom_glb_sfcurrents_2011060600.zip
+In                                           callable                                     ncom_glb_sfcurrents_2011060600_AK_stereo.nc
+IndentationError                             chr                                          ncom_glb_sfcurrents_2011060900.nc
+IndexError                                   class                                        ncom_glb_sfcurrents_2011060900.nc.gz
+KeyError                                     classmethod                                  netcdf_global_ocean_export.py
+KeyboardInterrupt                            cmp                                          netcdf_global_ocean_export.pyc
+LookupError                                  coerce                                       next
+MemoryError                                  compile                                      not
+NameError                                    complex                                      np
+NcomNetcdf                                   continue                                     object
+NcomTime                                     copyright                                    oct
+None                                         credits                                      open
+NotImplemented                               datetime                                     or
+NotImplementedError                          def                                          ord
+OSError                                      del                                          os
+Out                                          delattr                                      pass
+OverflowError                                dict                                         plt
+PendingDeprecationWarning                    dir                                          pow
+ReferenceError                               dist                                         print
+RuntimeError                                 divmod                                       property
+RuntimeWarning                               dreload                                      quit
+StandardError                                elif                                         raise
+StopIteration                                else                                         range
+SyntaxError                                  enumerate                                    raw_input
+SyntaxWarning                                eval                                         reduce
+SystemError                                  except                                       region.png
+SystemExit                                   exec                                         reload
+TabError                                     execfile                                     repr
+True                                         exit                                         return
+TypeError                                    file                                         reversed
+UnboundLocalError                            filter                                       round
+UnicodeDecodeError                           finally                                      set
+UnicodeEncodeError                           float                                        setattr
+UnicodeError                                 for                                          slice
+UnicodeTranslateError                        format                                       sorted
+UnicodeWarning                               from                                         staticmethod
+UserWarning                                  frozenset                                    stereo_proj
+ValueError                                   getattr                                      str
+Warning                                      global                                       sum
+ZeroDivisionError                            globals                                      super
+_                                            hasattr                                      sys
+__                                           hash                                         test_len
+__IP                                         help                                         time_0_projection.png
+__IPYTHON__                                  hex                                          timedelta
+__IPYTHON__active                            id                                           try
+___                                          if                                           tuple
+__debug__                                    import                                       type
+__doc__                                      in                                           tzinfo
+__file__                                     input                                        unichr
+__import__                                   int                                          unicode
+__name__                                     intern                                       vars
+__nonzero__                                  ip_set_hook                                  while
+__package__                                  ipalias                                      with
+_dh                                          ipmagic                                      xrange
+_i                                           ipsystem                                     yield
+_i1                                          ipython_output_0603.py                       zip
+_ih                                          ipython_output_0701.py                       
+
+In [2]: nf = NcomNetcdf('nc 
+nc                                           ncom_glb_sfcurrents_2011060600.zip           ncom_glb_sfcurrents_2011060900.nc.gz
+ncom_glb_sfcurrents_2011060600               ncom_glb_sfcurrents_2011060600_AK_stereo.nc  
+ncom_glb_sfcurrents_2011060600.nc            ncom_glb_sfcurrents_2011060900.nc            
+
+In [2]: nf = NcomNetcdf('ncom 
+ncom_glb_sfcurrents_2011060600               ncom_glb_sfcurrents_2011060600.zip           ncom_glb_sfcurrents_2011060900.nc
+ncom_glb_sfcurrents_2011060600.nc            ncom_glb_sfcurrents_2011060600_AK_stereo.nc  ncom_glb_sfcurrents_2011060900.nc.gz
+
+In [2]: nf = NcomNetcdf('ncom_glb_sfcurrents_201106090 
+ncom_glb_sfcurrents_2011060900.nc     ncom_glb_sfcurrents_2011060900.nc.gz  
+
+In [2]: nf = NcomNetcdf('ncom_glb_sfcurrents_2011060900.nc') 
+ 
+In [3]: nf.set_grid_region() 
+Out[3]: <__main__.NcomNetcdf instance at 0x970392c>
+
+In [4]: nf.exp 
+nf.export_nc   nf.export_txt  
+
+In [4]: nf.export_nc() 
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+
+/home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/netcdf_global_ocean_export.py in <module>()
+----> 1 
+      2 
+      3 
+      4 
+      5 
+
+/home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/netcdf_global_ocean_export.py in export_nc(self)
+     87 
+     88   def export_nc(self):
+---> 89     netfilename = dirname + "_AK_stereo.nc"
+     90     netfile = nc.NetCDFFile(netfilename,'w')
+     91     net_dims = (netfile.createDimension('t',u.shape[0]),
+
+NameError: global name 'dirname' is not defined
+
+In [5]: nf.lat[0] 
+Out[5]: 45.0
+
+In [6]: x,y = stereo_proj(nf.lon,nf.lat) 
+ 
+In [7]: R = 63781e3 
+
+In [8]: R*abs(x[-1]-x[0]) 
+Out[8]: 
+array([  2.02324748e+08,   2.02246435e+08,   2.02167160e+08,
+         2.02086922e+08,   2.02005723e+08,   2.01923561e+08,
+         2.01840439e+08,   2.01756356e+08,   2.01671313e+08,
+         2.01585310e+08,   2.01498348e+08,   2.01410426e+08,
+         2.01321546e+08,   2.01231707e+08,   2.01140911e+08,
+         2.01049158e+08,   2.00956447e+08,   2.00862780e+08,
+         2.00768157e+08,   2.00672578e+08,   2.00576045e+08,
+         2.00478556e+08,   2.00380114e+08,   2.00280717e+08,
+         2.00180368e+08,   2.00079065e+08,   1.99976811e+08,
+         1.99873604e+08,   1.99769446e+08,   1.99664337e+08,
+         1.99558278e+08,   1.99451270e+08,   1.99343311e+08,
+         1.99234404e+08,   1.99124549e+08,   1.99013746e+08,
+         1.98901996e+08,   1.98789299e+08,   1.98675656e+08,
+         1.98561067e+08,   1.98445533e+08,   1.98329055e+08,
+         1.98211633e+08,   1.98093267e+08,   1.97973958e+08,
+         1.97853707e+08,   1.97732515e+08,   1.97610381e+08,
+         1.97487307e+08,   1.97363292e+08,   1.97238339e+08,
+         1.97112446e+08,   1.96985616e+08,   1.96857847e+08,
+         1.96729142e+08,   1.96599501e+08,   1.96468923e+08,
+         1.96337411e+08,   1.96204964e+08,   1.96071583e+08,
+         1.95937269e+08,   1.95802023e+08,   1.95665844e+08,
+         1.95528734e+08,   1.95390694e+08,   1.95251723e+08,
+         1.95111824e+08,   1.94970995e+08,   1.94829239e+08,
+         1.94686555e+08,   1.94542945e+08,   1.94398408e+08,
+         1.94252947e+08,   1.94106560e+08,   1.93959250e+08,
+         1.93811017e+08,   1.93661861e+08,   1.93511784e+08,
+         1.93360785e+08,   1.93208866e+08,   1.93056028e+08,
+         1.92902270e+08,   1.92747595e+08,   1.92592002e+08,
+         1.92435492e+08,   1.92278067e+08,   1.92119726e+08,
+         1.91960471e+08,   1.91800302e+08,   1.91639221e+08,
+         1.91477227e+08,   1.91314322e+08,   1.91150506e+08,
+         1.90985780e+08,   1.90820146e+08,   1.90653603e+08,
+         1.90486153e+08,   1.90317796e+08,   1.90148533e+08,
+         1.89978365e+08,   1.89807293e+08,   1.89635318e+08,
+         1.89462440e+08,   1.89288660e+08,   1.89113979e+08,
+         1.88938398e+08,   1.88761918e+08,   1.88584539e+08,
+         1.88406263e+08,   1.88227090e+08,   1.88047021e+08,
+         1.87866058e+08,   1.87684199e+08,   1.87501448e+08,
+         1.87317804e+08,   1.87133269e+08,   1.86947843e+08,
+         1.86761527e+08,   1.86574322e+08,   1.86386229e+08,
+         1.86197249e+08,   1.86007383e+08,   1.85816632e+08,
+         1.85624996e+08,   1.85432476e+08,   1.85239074e+08,
+         1.85044791e+08,   1.84849626e+08,   1.84653582e+08,
+         1.84456659e+08,   1.84258858e+08,   1.84060180e+08,
+         1.83860625e+08,   1.83660196e+08,   1.83458893e+08,
+         1.83256716e+08,   1.83053667e+08,   1.82849747e+08,
+         1.82644957e+08,   1.82439297e+08,   1.82232769e+08,
+         1.82025373e+08,   1.81817111e+08,   1.81607984e+08,
+         1.81397993e+08,   1.81187138e+08,   1.80975420e+08,
+         1.80762841e+08,   1.80549402e+08,   1.80335104e+08,
+         1.80119947e+08,   1.79903933e+08,   1.79687062e+08,
+         1.79469337e+08,   1.79250757e+08,   1.79031324e+08,
+         1.78811039e+08,   1.78589902e+08,   1.78367916e+08,
+         1.78145081e+08,   1.77921398e+08,   1.77696868e+08,
+         1.77471492e+08,   1.77245271e+08,   1.77018207e+08,
+         1.76790301e+08,   1.76561553e+08,   1.76331964e+08,
+         1.76101536e+08,   1.75870270e+08,   1.75638167e+08,
+         1.75405228e+08,   1.75171455e+08,   1.74936847e+08,
+         1.74701407e+08,   1.74465135e+08,   1.74228033e+08,
+         1.73990101e+08,   1.73751342e+08,   1.73511755e+08,
+         1.73271343e+08,   1.73030106e+08,   1.72788045e+08,
+         1.72545162e+08,   1.72301458e+08,   1.72056933e+08,
+         1.71811590e+08,   1.71565429e+08,   1.71318451e+08,
+         1.71070658e+08,   1.70822051e+08,   1.70572630e+08,
+         1.70322398e+08,   1.70071355e+08,   1.69819503e+08,
+         1.69566842e+08,   1.69313374e+08,   1.69059101e+08,
+         1.68804022e+08,   1.68548141e+08,   1.68291457e+08,
+         1.68033972e+08,   1.67775687e+08,   1.67516603e+08,
+         1.67256723e+08,   1.66996046e+08,   1.66734574e+08,
+         1.66472309e+08,   1.66209252e+08,   1.65945403e+08,
+         1.65680765e+08,   1.65415338e+08,   1.65149123e+08,
+         1.64882123e+08,   1.64614338e+08,   1.64345769e+08,
+         1.64076418e+08,   1.63806286e+08,   1.63535375e+08,
+         1.63263685e+08,   1.62991218e+08,   1.62717975e+08,
+         1.62443958e+08,   1.62169167e+08,   1.61893605e+08,
+         1.61617272e+08,   1.61340170e+08,   1.61062300e+08,
+         1.60783663e+08,   1.60504262e+08,   1.60224096e+08,
+         1.59943167e+08,   1.59661478e+08,   1.59379028e+08,
+         1.59095820e+08,   1.58811854e+08,   1.58527133e+08,
+         1.58241657e+08,   1.57955428e+08,   1.57668447e+08,
+         1.57380716e+08,   1.57092235e+08,   1.56803007e+08,
+         1.56513033e+08,   1.56222314e+08,   1.55930851e+08,
+         1.55638646e+08,   1.55345700e+08,   1.55052014e+08,
+         1.54757591e+08,   1.54462431e+08,   1.54166536e+08,
+         1.53869907e+08,   1.53572546e+08,   1.53274454e+08,
+         1.52975632e+08,   1.52676083e+08,   1.52375806e+08,
+         1.52074804e+08,   1.51773079e+08,   1.51470631e+08,
+         1.51167462e+08,   1.50863574e+08,   1.50558967e+08,
+         1.50253644e+08,   1.49947606e+08,   1.49640854e+08,
+         1.49333390e+08,   1.49025215e+08,   1.48716331e+08,
+         1.48406739e+08,   1.48096440e+08,   1.47785437e+08,
+         1.47473730e+08,   1.47161322e+08,   1.46848212e+08,
+         1.46534404e+08,   1.46219899e+08,   1.45904698e+08,
+         1.45588802e+08,   1.45272213e+08,   1.44954933e+08,
+         1.44636962e+08,   1.44318304e+08,   1.43998958e+08,
+         1.43678927e+08,   1.43358213e+08,   1.43036815e+08,
+         1.42714737e+08,   1.42391980e+08,   1.42068545e+08,
+         1.41744434e+08,   1.41419648e+08,   1.41094190e+08,
+         1.40768059e+08,   1.40441259e+08,   1.40113790e+08,
+         1.39785654e+08,   1.39456853e+08,   1.39127388e+08,
+         1.38797261e+08,   1.38466473e+08,   1.38135027e+08,
+         1.37802922e+08,   1.37470162e+08,   1.37136748e+08,
+         1.36802681e+08,   1.36467962e+08,   1.36132594e+08,
+         1.35796579e+08,   1.35459917e+08,   1.35122610e+08,
+         1.34784660e+08,   1.34446068e+08,   1.34106837e+08,
+         1.33766967e+08,   1.33426461e+08,   1.33085319e+08,
+         1.32743544e+08,   1.32401138e+08,   1.32058101e+08,
+         1.31714435e+08,   1.31370143e+08,   1.31025225e+08,
+         1.30679684e+08,   1.30333521e+08,   1.29986737e+08,
+         1.29639335e+08,   1.29291315e+08,   1.28942681e+08,
+         1.28593432e+08,   1.28243572e+08,   1.27893101e+08,
+         1.27542021e+08,   1.27190334e+08,   1.26838042e+08,
+         1.26485147e+08,   1.26131649e+08,   1.25777551e+08,
+         1.25422854e+08,   1.25067560e+08,   1.24711671e+08,
+         1.24355189e+08,   1.23998114e+08,   1.23640449e+08,
+         1.23282196e+08,   1.22923356e+08,   1.22563931e+08,
+         1.22203923e+08,   1.21843333e+08,   1.21482163e+08,
+         1.21120415e+08,   1.20758090e+08,   1.20395191e+08,
+         1.20031718e+08,   1.19667674e+08,   1.19303061e+08,
+         1.18937880e+08,   1.18572132e+08,   1.18205821e+08,
+         1.17838946e+08,   1.17471511e+08,   1.17103517e+08,
+         1.16734965e+08,   1.16365858e+08,   1.15996197e+08,
+         1.15625984e+08,   1.15255220e+08,   1.14883908e+08,
+         1.14512049e+08,   1.14139645e+08,   1.13766698e+08,
+         1.13393209e+08,   1.13019181e+08,   1.12644614e+08,
+         1.12269512e+08,   1.11893875e+08,   1.11517706e+08,
+         1.11141005e+08,   1.10763776e+08,   1.10386020e+08,
+         1.10007738e+08,   1.09628932e+08,   1.09249605e+08,
+         1.08869758e+08,   1.08489393e+08,   1.08108511e+08,
+         1.07727115e+08,   1.07345205e+08,   1.06962785e+08,
+         1.06579856e+08,   1.06196420e+08,   1.05812478e+08,
+         1.05428033e+08,   1.05043085e+08,   1.04657638e+08,
+         1.04271693e+08,   1.03885251e+08,   1.03498315e+08,
+         1.03110886e+08])
+
+In [9]: R*abs(x[-1][-1]-x[-1][0])
+Out[9]: 173574278.65784153
+
+In [10]: R*abs(x[0][-1]-x[0][0])
+Out[10]: 74360416.696885273
+
+In [11]: 4e6 - R*abs(x[-1][-1]-x[-1][0])
+Out[11]: -169574278.65784153
+
+In [12]: abs(4e6 - R*abs(x[-1][-1]-x[-1][0])) 
+Out[12]: 169574278.65784153
+
+In [13]: x[0][0] 
+Out[13]: -2.3775362336522461
+
+In [14]: x,y = stereo_proj(-nf.lon,-nf.lat)
+ 
+In [15]: R*abs(x[0][-1]-x[0][0])
+Out[15]: 12758230.497756019
+
+In [16]: R*abs(x[-1][-1]-x[-1][0]) 
+Out[16]: 5465713.8342380067
+
+In [17]: abs(4e6 - R*abs(x[0][-1]-x[0][0])) 
+Out[17]: 8758230.4977560192
+
+In [18]: 4e6 - R*abs(x[0][-1]-x[0][0]) 
+   ....:  
+KeyboardInterrupt
+
+In [18]: 4e6 - R*abs(x[0][-1]-x[0][0])
+Out[19]: -8758230.4977560192
+
+In [20]: np.log(abs(4e6 - R*abs(x[0][-1]-x[0][0]))) 
+Out[20]: 15.985504444535179
+
+In [21]: %/np.log(10) 
+------------------------------------------------------------
+   File "<ipython console>", line 1
+     %/np.log(10)
+     ^
+SyntaxError: invalid syntax
+
+
+In [22]: Out[20]/np.log(10)
+Out[22]: 6.9424163707015341
+
+In [23]: R 
+Out[23]: 63781000.0
+
+In [24]: R = 6378.1e3 
+
+In [25]: np.log(abs(4e6 - R*abs(x[0][-1]-x[0][0])))
+Out[25]: 14.817676903842337
+
+In [26]: np.log(abs(4e6 - R*abs(x[0][-1]-x[0][0])))/log(10) 
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+
+/home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/netcdf_global_ocean_export.py in <module>()
+----> 1 
+      2 
+      3 
+      4 
+      5 
+
+NameError: name 'log' is not defined
+
+In [27]: np.log(abs(4e6 - R*abs(x[0][-1]-x[0][0])))/np.log(10)
+Out[27]: 6.4352353139639877
+
+In [28]: abs(4e6 - R*abs(x[0][-1]-x[0][0]))
+Out[28]: 2724176.9502243982
+
+In [29]: 4e6 - R*abs(x[0][-1]-x[0][0])
+Out[29]: 2724176.9502243982
+
+In [30]: R 
+Out[30]: 6378100.0
+
+In [31]: abs(x[-1][0] - x[-1][-1]) 
+Out[31]: 0.085695016293849374
+
+In [32]: abs(x[-1][0] - x[-1][-1])*R 
+Out[32]: 546571.3834238007
+
+In [33]: 4e6 - R*abs(x[-1][-1]-x[-1][0])
+Out[33]: 3453428.6165761994
+
+In [34]: R*abs(x[-1][-1]-x[-1][0])/1e6 
+Out[34]: 0.54657138342380074
+
+In [35]: R*abs(x[-1][-1]-x[-1][0])/4e6
+Out[35]: 0.13664284585595018
+
+In [36]: R*abs(x[-1][-1]-x[-1][0])/4e5 
+Out[36]: 1.3664284585595017
+
+In [37]: R*abs(x[-1][-1]-x[-1][0]) 
+Out[37]: 546571.3834238007
+
+In [38]: R 
+Out[38]: 6378100.0
+
+In [39]: abs(x[-1][-1]-x[-1][0])
+Out[39]: 0.085695016293849374
+
+In [40]: abs(x[0][-1]-x[0][0])
+Out[40]: 0.20003183546441761
+
+In [41]: quiver(x,y,nf.u[0],nf.v[0]) 
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+
+/home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/netcdf_global_ocean_export.py in <module>()
+----> 1 
+      2 
+      3 
+      4 
+      5 
+
+NameError: name 'quiver' is not defined
+
+In [42]: plt.quiver(x,y,nf.u[0],nf.v[0])
+Out[42]: <matplotlib.quiver.Quiver object at 0xa26fc6c>
+
+In [43]: plt.show() 
+ 
+ 
+In [44]: 
+
+In [45]: plt.show() 
+
+In [46]: plt.quiver(x,y,nf.u[0],nf.v[0])
+Out[46]: <matplotlib.quiver.Quiver object at 0xd6ed1ec>
+
+In [47]: plt.ax 
+plt.axes     plt.axhline  plt.axhspan  plt.axis     plt.axvline  plt.axvspan  
+
+In [47]: plt.axes? 
+Type:             function
+Base Class:       <type 'function'>
+String Form:   <function axes at 0xa139b1c>
+Namespace:        Interactive
+File:             /usr/lib/pymodules/python2.7/matplotlib/pyplot.py
+Definition:       plt.axes(*args, **kwargs)
+Docstring:
+    Add an axes at position rect specified by:
+    
+    - ``axes()`` by itself creates a default full ``subplot(111)`` window axis.
+    
+    - ``axes(rect, axisbg='w')`` where *rect* = [left, bottom, width,
+      height] in normalized (0, 1) units.  *axisbg* is the background
+      color for the axis, default white.
+Type:             function
+Base Class:       <type 'function'>
+String Form:   <function axes at 0xa139b1c>
+Namespace:        Interactive
+File:             /usr/lib/pymodules/python2.7/matplotlib/pyplot.py
+Definition:       plt.axes(*args, **kwargs)
+Docstring:
+    Add an axes at position rect specified by:
+    
+    - ``axes()`` by itself creates a default full ``subplot(111)`` window axis.
+    
+    - ``axes(rect, axisbg='w')`` where *rect* = [left, bottom, width,
+      height] in normalized (0, 1) units.  *axisbg* is the background
+      color for the axis, default white.
+    
+    - ``axes(h)`` where *h* is an axes instance makes *h* the current
+      axis.  An :class:`~matplotlib.axes.Axes` instance is returned.
+    
+    =======   ============   ================================================
+
+In [48]: x,y = stereo_proj(nf.lon,-nf.lat)
+
+In [49]: plt.cla() 
+ 
+In [50]: plt.quiver(x,y,nf.u[0],nf.v[0])
+Out[50]: <matplotlib.quiver.Quiver object at 0x10a7cd6c>
+
+In [51]: def rotate_pts(x,y,th):
+   ....:       from numpy import sin,cos
+   ....:   return (x*cos(th) - y*sin(th), x*sin(th) + y*cos(th)) 
+   ....:  
+
+In [52]: x,y = stereo_proj(nf.lon,nf.lat)
+
+In [53]: plt.cla() 
+ 
+In [54]: plt.quiver(x,y,nf.u[0],nf.v[0])  
+Out[54]: <matplotlib.quiver.Quiver object at 0x10a8dfac>
+
+In [55]: plt.quiver(x,y,nf.u[0],nf.v[0],aspect='equal') 
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+
+/home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/netcdf_global_ocean_export.py in <module>()
+----> 1 
+      2 
+      3 
+      4 
+      5 
+
+/usr/lib/pymodules/python2.7/matplotlib/pyplot.pyc in quiver(*args, **kw)
+   2196         ax.hold(hold)
+   2197     try:
+-> 2198         ret = ax.quiver(*args, **kw)
+   2199         draw_if_interactive()
+   2200     finally:
+
+/usr/lib/pymodules/python2.7/matplotlib/axes.pyc in quiver(self, *args, **kw)
+   5873     def quiver(self, *args, **kw):
+   5874         if not self._hold: self.cla()
+-> 5875         q = mquiver.Quiver(self, *args, **kw)
+   5876         self.add_collection(q, False)
+   5877         self.update_datalim(q.XY)
+
+/usr/lib/pymodules/python2.7/matplotlib/quiver.pyc in __init__(self, ax, *args, **kw)
+    392                                             transOffset=ax.transData,
+    393                                             closed=False,
+--> 394                                             **kw)
+    395         self.polykw = kw
+    396         self.set_UVC(U, V, C)
+
+/usr/lib/pymodules/python2.7/matplotlib/collections.pyc in __init__(self, verts, sizes, closed, **kwargs)
+    664         %(Collection)s
+    665         """
+--> 666         Collection.__init__(self,**kwargs)
+    667         self._sizes = sizes
+    668         self.set_verts(verts, closed)
+
+/usr/lib/pymodules/python2.7/matplotlib/collections.pyc in __init__(self, edgecolors, facecolors, linewidths, linestyles, antialiaseds, offsets, transOffset, 
+norm, cmap, pickradius, urls, **kwargs)
+    106 
+    107         self._pickradius = pickradius
+--> 108         self.update(kwargs)
+    109 
+    110 
+
+/usr/lib/pymodules/python2.7/matplotlib/artist.pyc in update(self, props)
+    624             func = getattr(self, 'set_'+k, None)
+    625             if func is None or not callable(func):
+--> 626                 raise AttributeError('Unknown property %s'%k)
+    627             func(v)
+    628             changed = True
+
+AttributeError: Unknown property aspect
+
+In [56]: plt.ax 
+plt.axes     plt.axhline  plt.axhspan  plt.axis     plt.axvline  plt.axvspan  
+
+In [56]: plt.axes 
+plt.axes
+
+In [56]: plt.axes. 
+plt.axes.__call__          plt.axes.__doc__           plt.axes.__module__        plt.axes.__sizeof__        plt.axes.func_doc
+plt.axes.__class__         plt.axes.__format__        plt.axes.__name__          plt.axes.__str__           plt.axes.func_globals
+plt.axes.__closure__       plt.axes.__get__           plt.axes.__new__           plt.axes.__subclasshook__  plt.axes.func_name
+plt.axes.__code__          plt.axes.__getattribute__  plt.axes.__reduce__        plt.axes.func_closure      
+plt.axes.__defaults__      plt.axes.__globals__       plt.axes.__reduce_ex__     plt.axes.func_code         
+plt.axes.__delattr__       plt.axes.__hash__          plt.axes.__repr__          plt.axes.func_defaults     
+plt.axes.__dict__          plt.axes.__init__          plt.axes.__setattr__       plt.axes.func_dict         
+
+In [56]: plt.axes. 
+plt.axes.__call__          plt.axes.__doc__           plt.axes.__module__        plt.axes.__sizeof__        plt.axes.func_doc
+plt.axes.__class__         plt.axes.__format__        plt.axes.__name__          plt.axes.__str__           plt.axes.func_globals
+plt.axes.__closure__       plt.axes.__get__           plt.axes.__new__           plt.axes.__subclasshook__  plt.axes.func_name
+plt.axes.__code__          plt.axes.__getattribute__  plt.axes.__reduce__        plt.axes.func_closure      
+plt.axes.__defaults__      plt.axes.__globals__       plt.axes.__reduce_ex__     plt.axes.func_code         
+plt.axes.__delattr__       plt.axes.__hash__          plt.axes.__repr__          plt.axes.func_defaults     
+plt.axes.__dict__          plt.axes.__init__          plt.axes.__setattr__       plt.axes.func_dict         
+
+In [56]: plt.axes() 
+Out[56]: <matplotlib.axes.AxesSubplot object at 0xd6dac0c>
+
+In [57]: ax = plt.axes()
+
+In [58]: ax. 
+Display all 369 possibilities? (y or n)
+ax._Axes__draw_animate                   ax.contour                               ax.label_outer
+ax._Axes__pick                           ax.contourf                              ax.legend
+ax.__class__                             ax.convert_xunits                        ax.legend_
+ax.__delattr__                           ax.convert_yunits                        ax.lines
+ax.__dict__                              ax.csd                                   ax.loglog
+ax.__doc__                               ax.dataLim                               ax.matshow
+ax.__format__                            ax.disconnect                            ax.minorticks_off
+ax.__getattribute__                      ax.drag_pan                              ax.minorticks_on
+ax.__hash__                              ax.draw                                  ax.name
+ax.__init__                              ax.draw_artist                           ax.numCols
+ax.__module__                            ax.end_pan                               ax.numRows
+ax.__new__                               ax.errorbar                              ax.patch
+ax.__reduce__                            ax.eventson                              ax.patches
+ax.__reduce_ex__                         ax.figbox                                ax.pchanged
+ax.__repr__                              ax.figure                                ax.pcolor
+ax.__setattr__                           ax.fill                                  ax.pcolorfast
+ax.__sizeof__                            ax.fill_between                          ax.pcolormesh
+ax.__str__                               ax.fill_betweenx                         ax.pick
+ax.__subclasshook__                      ax.findobj                               ax.pickable
+ax.__weakref__                           ax.fmt_xdata                             ax.pie
+ax._adjustable                           ax.fmt_ydata                             ax.plot
+ax._alpha                                ax.format_coord                          ax.plot_date
+ax._anchor                               ax.format_xdata                          ax.properties
+ax._animated                             ax.format_ydata                          ax.psd
+ax._aspect                               ax.frame                                 ax.quiver
+ax._autoscaleXon                         ax.get_adjustable                        ax.quiverkey
+ax._autoscaleYon                         ax.get_alpha                             ax.redraw_in_frame
+ax._axes_class                           ax.get_anchor                            ax.relim
+ax._axes_locator                         ax.get_animated                          ax.remove
+ax._axisbelow                            ax.get_aspect                            ax.remove_callback
+ax._axisbg                               ax.get_autoscale_on                      ax.reset_position
+ax._cachedRenderer                       ax.get_autoscalex_on                     ax.rowNum
+ax._clipon                               ax.get_autoscaley_on                     ax.scatter
+ax._clippath                             ax.get_axes                              ax.semilogx
+ax._cols                                 ax.get_axes_locator                      ax.semilogy
+ax._connected                            ax.get_axis_bgcolor                      ax.set
+ax._contains                             ax.get_axisbelow                         ax.set_adjustable
+ax._cursorProps                          ax.get_child_artists                     ax.set_alpha
+ax._frameon                              ax.get_children                          ax.set_anchor
+ax._gen_axes_patch                       ax.get_clip_box                          ax.set_animated
+ax._gen_axes_spines                      ax.get_clip_on                           ax.set_aspect
+ax._get_legend_handles                   ax.get_clip_path                         ax.set_autoscale_on
+ax._get_lines                            ax.get_contains                          ax.set_autoscalex_on
+ax._get_patches_for_fill                 ax.get_cursor_props                      ax.set_autoscaley_on
+ax._gid                                  ax.get_data_ratio                        ax.set_axes
+ax._gridOn                               ax.get_data_ratio_log                    ax.set_axes_locator
+ax._hold                                 ax.get_figure                            ax.set_axis_bgcolor
+ax._init_axis                            ax.get_frame                             ax.set_axis_off
+ax._label                                ax.get_frame_on                          ax.set_axis_on
+ax._lod                                  ax.get_geometry                          ax.set_axisbelow
+ax._navigate                             ax.get_gid                               ax.set_clip_box
+ax._navigate_mode                        ax.get_images                            ax.set_clip_on
+ax._num                                  ax.get_label                             ax.set_clip_path
+ax._oid                                  ax.get_legend                            ax.set_color_cycle
+ax._originalPosition                     ax.get_legend_handles_labels             ax.set_contains
+ax._pcolorargs                           ax.get_lines                             ax.set_cursor_props
+ax._picker                               ax.get_navigate                          ax.set_figure
+ax._position                             ax.get_navigate_mode                     ax.set_frame_on
+ax._process_unit_info                    ax.get_picker                            ax.set_gid
+ax._propobservers                        ax.get_position                          ax.set_label
+ax._rasterization_zorder                 ax.get_rasterization_zorder              ax.set_lod
+ax._rasterized                           ax.get_rasterized                        ax.set_navigate
+ax._remove_method                        ax.get_renderer_cache                    ax.set_navigate_mode
+ax._rows                                 ax.get_shared_x_axes                     ax.set_picker
+ax._set_artist_props                     ax.get_shared_y_axes                     ax.set_position
+ax._set_gc_clip                          ax.get_snap                              ax.set_rasterization_zorder
+ax._set_lim_and_transforms               ax.get_tightbbox                         ax.set_rasterized
+ax._shared_x_axes                        ax.get_title                             ax.set_snap
+ax._shared_y_axes                        ax.get_transform                         ax.set_title
+ax._sharex                               ax.get_transformed_clip_path_and_affine  ax.set_transform
+ax._sharey                               ax.get_url                               ax.set_url
+ax._snap                                 ax.get_visible                           ax.set_visible
+ax._transform                            ax.get_window_extent                     ax.set_xbound
+ax._transformSet                         ax.get_xaxis                             ax.set_xlabel
+ax._update_line_limits                   ax.get_xaxis_text1_transform             ax.set_xlim
+ax._update_patch_limits                  ax.get_xaxis_text2_transform             ax.set_xscale
+ax._update_transScale                    ax.get_xaxis_transform                   ax.set_xticklabels
+ax._url                                  ax.get_xbound                            ax.set_xticks
+ax._visible                              ax.get_xgridlines                        ax.set_ybound
+ax._xaxis_transform                      ax.get_xlabel                            ax.set_ylabel
+ax._xcid                                 ax.get_xlim                              ax.set_ylim
+ax._yaxis_transform                      ax.get_xmajorticklabels                  ax.set_yscale
+ax._ycid                                 ax.get_xminorticklabels                  ax.set_yticklabels
+ax.acorr                                 ax.get_xscale                            ax.set_yticks
+ax.add_artist                            ax.get_xticklabels                       ax.set_zorder
+ax.add_callback                          ax.get_xticklines                        ax.specgram
+ax.add_collection                        ax.get_xticks                            ax.spines
+ax.add_line                              ax.get_yaxis                             ax.spy
+ax.add_patch                             ax.get_yaxis_text1_transform             ax.start_pan
+ax.add_table                             ax.get_yaxis_text2_transform             ax.stem
+ax.aname                                 ax.get_yaxis_transform                   ax.step
+ax.annotate                              ax.get_ybound                            ax.table
+ax.apply_aspect                          ax.get_ygridlines                        ax.tables
+ax.arrow                                 ax.get_ylabel                            ax.text
+ax.artists                               ax.get_ylim                              ax.texts
+ax.autoscale_view                        ax.get_ymajorticklabels                  ax.ticklabel_format
+ax.axes                                  ax.get_yminorticklabels                  ax.title
+ax.axesPatch                             ax.get_yscale                            ax.titleOffsetTrans
+ax.axhline                               ax.get_yticklabels                       ax.transAxes
+ax.axhspan                               ax.get_yticklines                        ax.transData
+ax.axis                                  ax.get_yticks                            ax.transLimits
+ax.axison                                ax.get_zorder                            ax.transScale
+ax.axvline                               ax.grid                                  ax.twinx
+ax.axvspan                               ax.has_data                              ax.twiny
+ax.bar                                   ax.have_units                            ax.update
+ax.barbs                                 ax.hexbin                                ax.update_datalim
+ax.barh                                  ax.hist                                  ax.update_datalim_bounds
+ax.bbox                                  ax.hitlist                               ax.update_datalim_numerix
+ax.boxplot                               ax.hlines                                ax.update_from
+ax.broken_barh                           ax.hold                                  ax.update_params
+ax.callbacks                             ax.ignore_existing_data_limits           ax.viewLim
+ax.can_zoom                              ax.images                                ax.vlines
+ax.change_geometry                       ax.imshow                                ax.x
+ax.cla                                   ax.in_axes                               ax.x_isdata
+ax.clabel                                ax.invert_xaxis                          ax.xaxis
+ax.clear                                 ax.invert_yaxis                          ax.xaxis_date
+ax.clipbox                               ax.is_figure_set                         ax.xaxis_inverted
+ax.cohere                                ax.is_first_col                          ax.xcorr
+ax.colNum                                ax.is_first_row                          ax.y_isdata
+ax.collections                           ax.is_last_col                           ax.yaxis
+ax.connect                               ax.is_last_row                           ax.yaxis_date
+ax.contains                              ax.is_transform_set                      ax.yaxis_inverted
+ax.contains_point                        ax.ishold                                ax.zorder
+
+In [58]: ax.set_ 
+ax.set_adjustable            ax.set_axis_bgcolor          ax.set_figure                ax.set_rasterized            ax.set_xticklabels
+ax.set_alpha                 ax.set_axis_off              ax.set_frame_on              ax.set_snap                  ax.set_xticks
+ax.set_anchor                ax.set_axis_on               ax.set_gid                   ax.set_title                 ax.set_ybound
+ax.set_animated              ax.set_axisbelow             ax.set_label                 ax.set_transform             ax.set_ylabel
+ax.set_aspect                ax.set_clip_box              ax.set_lod                   ax.set_url                   ax.set_ylim
+ax.set_autoscale_on          ax.set_clip_on               ax.set_navigate              ax.set_visible               ax.set_yscale
+ax.set_autoscalex_on         ax.set_clip_path             ax.set_navigate_mode         ax.set_xbound                ax.set_yticklabels
+ax.set_autoscaley_on         ax.set_color_cycle           ax.set_picker                ax.set_xlabel                ax.set_yticks
+ax.set_axes                  ax.set_contains              ax.set_position              ax.set_xlim                  ax.set_zorder
+ax.set_axes_locator          ax.set_cursor_props          ax.set_rasterization_zorder  ax.set_xscale                
+
+In [58]: ax.set_aspect('equal') 
+
+In [59]: x,y = stereo_proj(nf.lon,nf.lat)
+
+In [60]: plt.cla() 
+
+In [61]: plt.qui 
+plt.quiver     plt.quiverkey  
+
+In [61]: plt.quiver(x,y,nf.u[0],nf.v[0],aspect='equal')
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+
+/home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/netcdf_global_ocean_export.py in <module>()
+----> 1 
+      2 
+      3 
+      4 
+      5 
+
+/usr/lib/pymodules/python2.7/matplotlib/pyplot.pyc in quiver(*args, **kw)
+   2196         ax.hold(hold)
+   2197     try:
+-> 2198         ret = ax.quiver(*args, **kw)
+   2199         draw_if_interactive()
+   2200     finally:
+
+/usr/lib/pymodules/python2.7/matplotlib/axes.pyc in quiver(self, *args, **kw)
+   5873     def quiver(self, *args, **kw):
+   5874         if not self._hold: self.cla()
+-> 5875         q = mquiver.Quiver(self, *args, **kw)
+   5876         self.add_collection(q, False)
+   5877         self.update_datalim(q.XY)
+
+/usr/lib/pymodules/python2.7/matplotlib/quiver.pyc in __init__(self, ax, *args, **kw)
+    392                                             transOffset=ax.transData,
+    393                                             closed=False,
+--> 394                                             **kw)
+    395         self.polykw = kw
+    396         self.set_UVC(U, V, C)
+
+/usr/lib/pymodules/python2.7/matplotlib/collections.pyc in __init__(self, verts, sizes, closed, **kwargs)
+    664         %(Collection)s
+    665         """
+--> 666         Collection.__init__(self,**kwargs)
+    667         self._sizes = sizes
+    668         self.set_verts(verts, closed)
+
+/usr/lib/pymodules/python2.7/matplotlib/collections.pyc in __init__(self, edgecolors, facecolors, linewidths, linestyles, antialiaseds, offsets, transOffset, 
+norm, cmap, pickradius, urls, **kwargs)
+    106 
+    107         self._pickradius = pickradius
+--> 108         self.update(kwargs)
+    109 
+    110 
+
+/usr/lib/pymodules/python2.7/matplotlib/artist.pyc in update(self, props)
+    624             func = getattr(self, 'set_'+k, None)
+    625             if func is None or not callable(func):
+--> 626                 raise AttributeError('Unknown property %s'%k)
+    627             func(v)
+    628             changed = True
+
+AttributeError: Unknown property aspect
+
+In [62]: plt.quiver(x,y,nf.u[0],nf.v[0],axis='equal')
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+
+/home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/netcdf_global_ocean_export.py in <module>()
+----> 1 
+      2 
+      3 
+      4 
+      5 
+
+/usr/lib/pymodules/python2.7/matplotlib/pyplot.pyc in quiver(*args, **kw)
+   2196         ax.hold(hold)
+   2197     try:
+-> 2198         ret = ax.quiver(*args, **kw)
+   2199         draw_if_interactive()
+   2200     finally:
+
+/usr/lib/pymodules/python2.7/matplotlib/axes.pyc in quiver(self, *args, **kw)
+   5873     def quiver(self, *args, **kw):
+   5874         if not self._hold: self.cla()
+-> 5875         q = mquiver.Quiver(self, *args, **kw)
+   5876         self.add_collection(q, False)
+   5877         self.update_datalim(q.XY)
+
+/usr/lib/pymodules/python2.7/matplotlib/quiver.pyc in __init__(self, ax, *args, **kw)
+    392                                             transOffset=ax.transData,
+    393                                             closed=False,
+--> 394                                             **kw)
+    395         self.polykw = kw
+    396         self.set_UVC(U, V, C)
+
+/usr/lib/pymodules/python2.7/matplotlib/collections.pyc in __init__(self, verts, sizes, closed, **kwargs)
+    664         %(Collection)s
+    665         """
+--> 666         Collection.__init__(self,**kwargs)
+    667         self._sizes = sizes
+    668         self.set_verts(verts, closed)
+
+/usr/lib/pymodules/python2.7/matplotlib/collections.pyc in __init__(self, edgecolors, facecolors, linewidths, linestyles, antialiaseds, offsets, transOffset, 
+norm, cmap, pickradius, urls, **kwargs)
+    106 
+    107         self._pickradius = pickradius
+--> 108         self.update(kwargs)
+    109 
+    110 
+
+/usr/lib/pymodules/python2.7/matplotlib/artist.pyc in update(self, props)
+    624             func = getattr(self, 'set_'+k, None)
+    625             if func is None or not callable(func):
+--> 626                 raise AttributeError('Unknown property %s'%k)
+    627             func(v)
+    628             changed = True
+
+AttributeError: Unknown property axis
+
+In [63]: plt.quiver(x,y,nf.u[0],nf.v[0],axes='equal')
+Out[63]: <matplotlib.quiver.Quiver object at 0x13c909ac>
+
+In [64]: def stereo_proj(lon,lat):
+   ....:       from numpy import meshgrid,pi,sin,cos,tan,abs
+   ....:   lon,lat = meshgrid(lon,lat)
+   ....:   lat = pi/180*(90 - lat)
+   ....:   lon = pi/180*(lon - lon[0])
+   ....:   x = cos( lon ) / tan( lat/2 )
+   ....:   y = sin( lon ) / tan( lat/2 )
+   ....:   return x,y 
+   ....:  
+
+In [65]: x,y = stereo_proj(nf.lon,nf.lat)
+
+In [66]: plt.cla() 
+
+In [67]: plt.quiver(x,y,nf.u[0],nf.v[0],axes='equal')
+Out[67]: <matplotlib.quiver.Quiver object at 0xd6f68ac>
+
+In [68]: def stereo_proj(lon,lat):
+   ....:       from numpy import meshgrid,pi,sin,cos,tan,abs
+   ....:   lon = lon - lon[0]
+   ....:   lat = 90 - lat
+   ....:   lon,lat = meshgrid(lon,lat)
+   ....:   lat = pi/180*lat
+   ....:   lon = pi/180*lon
+   ....:   x = cos( lon ) / tan( lat/2 )
+   ....:   y = sin( lon ) / tan( lat/2 )
+   ....:   return x,y 
+   ....:  
+
+In [69]: x,y = stereo_proj(nf.lon,nf.lat)
+
+In [70]: plt.cla() 
+
+In [71]: x,y = stereo_proj(nf.lon,nf.lat) 
+ 
+In [72]: plt.quiver(x,y,nf.u[0],nf.v[0],axes='equal')
+Out[72]: <matplotlib.quiver.Quiver object at 0xd6fd50c>
+
+In [73]: x[0][0] 
+Out[73]: 2.4142135623730949
+
+In [74]: y[0][0] 
+Out[74]: 0.0
+
+In [75]: plt.quiver(x,y,nf.u[0],nf.v[0])
+Out[75]: <matplotlib.quiver.Quiver object at 0x1d38022c>
+
+In [76]: plt.cla() 
+ 
+In [77]: plt.quiver(x,y,nf.u[0],nf.v[0]) 
+Out[77]: <matplotlib.quiver.Quiver object at 0xd6e7f8c>
+
+In [78]: plt.cla() 
+
+In [79]: plt.quiver(x,y,nf.u[0],nf.v[0],axes=(4.5/6))
+Out[79]: <matplotlib.quiver.Quiver object at 0xd70592c>
+
+In [80]: x,y = stereo_proj(nf.lon,-nf.lat)
+
+In [81]: plt.cla() 
+ 
+In [82]: plt.quiver(x,y,nf.u[0],nf.v[0],axes=(4.5/6))
+Out[82]: <matplotlib.quiver.Quiver object at 0x10a923cc>
+
+In [83]: y[-1][-1] 
+Out[83]: 0.13568690312737292
+
+In [84]: x[-1][-1] 
+Out[84]: 0.11436020545767844
+
+In [85]: x[0][-1]
+Out[85]: 0.26694296577698634
+
+In [86]: y[0][-1]
+Out[86]: 0.31672437272176673
+
+In [87]: from numpy import cos,sin,pi 
+
+In [88]: nf.lon[-1] - nf.lon[0] 
+Out[88]: 49.875
+
+In [89]: (nf.lon[-1] - nf.lon[0])*pi/180 
+Out[89]: 0.87048296443217177
+
+In [90]: x[0][0] 
+Out[90]: 0.41421356237309509
+
+In [91]: from numpy import a 
+abs                all                any                arcsin             argsort            array_repr         asfarray           average
+absolute           allclose           append             arcsinh            argwhere           array_split        asfortranarray     
+add                alltrue            apply_along_axis   arctan             around             array_str          asmatrix           
+add_docstring      alterdot           apply_over_axes    arctan2            array              asanyarray         asscalar           
+add_newdoc         amax               arange             arctanh            array2string       asarray            atleast_1d         
+add_newdocs        amin               arccos             argmax             array_equal        asarray_chkfinite  atleast_2d         
+alen               angle              arccosh            argmin             array_equiv        ascontiguousarray  atleast_3d         
+
+In [91]: from numpy import ar 
+arange        arccosh       arcsinh       arctan2       argmax        argsort       around        array2string  array_equiv   array_split   
+arccos        arcsin        arctan        arctanh       argmin        argwhere      array         array_equal   array_repr    array_str     
+
+In [91]: from numpy import arcco 
+arccos   arccosh  
+
+In [91]: from numpy import arccos 
+
+In [92]: acos(x[0][-1]/x[0][0]) 
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+
+/home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/netcdf_global_ocean_export.py in <module>()
+----> 1 
+      2 
+      3 
+      4 
+      5 
+
+NameError: name 'acos' is not defined
+
+In [93]: arccos(x[0][-1]/x[0][0])
+Out[93]: 0.87048296443217188
+
+In [94]: (nf.lon[-1] - nf.lon[0])*pi/180 
+Out[94]: 0.87048296443217177
+
+In [95]: xx,yy = rotate_pts(x,y,-(nf.lon[-1] - nf.lon[0])*pi/180/2) 
+
+In [96]: xx,yy = rotate_pts(x,y,-(nf.lon[-1] - nf.lon[0])*pi/180/2 - pi/2)
+
+In [97]: plt.cla() 
+
+In [98]: plt.quiver(xx,yy,nf.u[0],nf.v[0],axes=(4.5/6))
+Out[98]: <matplotlib.quiver.Quiver object at 0xd6ed30c>
+
+In [99]: R*abs(xx[0][0] - xx[-1][-1])
+Out[99]: 1591103.5425921236
+
+In [100]: R*abs(xx[-1][0] - xx[-1][-1])
+Out[100]: 954405.53219680721
+
+In [101]: R*abs(xx[0][0] - xx[0][-1])
+Out[101]: 2227801.55298744
+
+In [102]: R*abs(xx[0][0] - xx[0][-1]) - 4e6 
+Out[102]: -1772198.44701256
+
+In [103]: xx[0][0] 
+Out[103]: -0.17464460834632878
+
+In [104]: R*abs(xx[-1][0] - xx[-1][-1]) - 4e6
+Out[104]: -3045594.4678031928
+
+In [105]: xx[-1][0] 
+Out[105]: -0.074818953308728828
+
+In [106]: yy[0][0] 
+Out[106]: -0.37559570821478694
+
+In [107]: xx[0][-1\ 
+   .....: ] 
+Out[107]: 0.17464460834632894
+
+In [108]: xx[0][-1] - xx[0][0] 
+Out[108]: 0.34928921669265772
+
+In [109]: R*(xx[0][-1] - xx[0][0])
+Out[109]: 2227801.55298744
+
+In [110]: R*(xx[0][-1] - xx[0][0]) - 4e6 
+Out[110]: -1772198.44701256
+
+In [111]: (R*(xx[0][-1] - xx[0][0]) - 4e6)/4e6 
+Out[111]: -0.44304961175314
+
+In [112]: (R*(xx[0][-1] - xx[0][0]) - 3e6)/3e6
+Out[112]: -0.25739948233751997
+
+In [113]: (R*(xx[0][-1] - xx[0][0]) - 4e6)/4e6
+Out[113]: -0.44304961175314
+
+In [114]: dist((xx[0][-1],yy[0][-1]),(xx[0][0],yy[0][0])) 
+Out[114]: 0.34928921669265772
+
+In [115]: dist((xx[0][-1],yy[0][-1]),(xx[0][0],yy[0][0]))*r
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+
+/home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/netcdf_global_ocean_export.py in <module>()
+----> 1 
+      2 
+      3 
+      4 
+      5 
+
+NameError: name 'r' is not defined
+
+In [116]: dist((xx[0][-1],yy[0][-1]),(xx[0][0],yy[0][0]))*R 
+Out[116]: 2227801.55298744
+
+In [117]: dist((xx[0][-1],yy[0][-1]),(xx[0][0],yy[0][0]))*R - 4e6 
+Out[117]: -1772198.44701256
+
+In [118]: (dist((xx[0][-1],yy[0][-1]),(xx[0][0],yy[0][0]))*R - 4e6)/4e6 
+Out[118]: -0.44304961175314
+
+In [119]: yy.shape 
+Out[119]: (200, 400)
+
+In [120]: ymid = (yy[ yy.shape[1]/2 ] + yy[ yy.shape[1]/1 +1 ])/2 
+---------------------------------------------------------------------------
+IndexError                                Traceback (most recent call last)
+
+/home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/netcdf_global_ocean_export.py in <module>()
+----> 1 
+      2 
+      3 
+      4 
+      5 
+
+IndexError: index out of bounds
+
+In [121]: ymid = (yy[ yy.shape[1]/2 ] + yy[ yy.shape[1]/2 +1 ])/2
+---------------------------------------------------------------------------
+IndexError                                Traceback (most recent call last)
+
+/home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/netcdf_global_ocean_export.py in <module>()
+----> 1 
+      2 
+      3 
+      4 
+      5 
+
+IndexError: index out of bounds
+
+In [122]: yy.shape[1]/2 
+Out[122]: 200
+
+In [123]: ymid = (yy[0][ yy.shape[1]/2 ] + yy[0][ yy.shape[1]/2 +1 ])/2
+
+In [124]: ymid 
+Out[124]: -0.41421233018008707
+
+In [125]: ymid0 = (yy[0][ yy.shape[1]/2 ] + yy[0][ yy.shape[1]/2 +1 ])/2
+
+In [126]: ymid1 = (yy[-1][ yy.shape[1]/2 ] + yy[-1][ yy.shape[1]/2 +1 ])/2
+
+In [127]: abs(ymid0-ymid1) 
+Out[127]: 0.23676091450175604
+
+In [128]: abs(ymid0-ymid1)*R 
+Out[128]: 1510084.7887836501
+
+In [129]: (abs(ymid0-ymid1)*R - 3e6)/3e6 
+Out[129]: -0.49663840373878326
+
+In [130]: plt.cla() 
+ 
+In [131]: plt.qui 
+plt.quiver     plt.quiverkey  
+
+In [131]: plt.quiver(R*xx,R*yy,nf.u[0],nf.v[0],axes=(4.5/6))
+Out[131]: <matplotlib.quiver.Quiver object at 0xd6e7a2c>
+
+In [132]: plt.figure() 
+Out[132]: <matplotlib.figure.Figure object at 0xd705e4c>
+
+In [133]: nf.basemap(nf.x,nf.y,nf.u[0],nf.v[0]) 
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+
+/home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/netcdf_global_ocean_export.py in <module>()
+----> 1 
+      2 
+      3 
+      4 
+      5 
+
+TypeError: __call__() takes at most 4 arguments (5 given)
+
+In [134]: nf.basemap.quiver(nf.x,nf.y,nf.u[0],nf.v[0])
+Out[134]: <matplotlib.quiver.Quiver object at 0x330afb4c>
+
+In [135]: ymid 
+Out[135]: -0.41421233018008707
+
+In [136]: xx,yy 
+Out[136]: 
+(array([[-0.17464461, -0.17382477, -0.17300411, ...,  0.17300411,
+         0.17382477,  0.17464461],
+       [-0.17410601, -0.1732887 , -0.17247057, ...,  0.17247057,
+         0.1732887 ,  0.17410601],
+       [-0.17356791, -0.17275312, -0.17193752, ...,  0.17193752,
+         0.17275312,  0.17356791],
+       ..., 
+       [-0.07576814, -0.07541246, -0.07505642, ...,  0.07505642,
+         0.07541246,  0.07576814],
+       [-0.07529345, -0.07494   , -0.07458619, ...,  0.07458619,
+         0.07494   ,  0.07529345],
+       [-0.07481895, -0.07446773, -0.07411615, ...,  0.07411615,
+         0.07446773,  0.07481895]]),
+ array([[-0.37559571, -0.37597583, -0.37635416, ..., -0.37635416,
+        -0.37597583, -0.37559571],
+       [-0.37443739, -0.37481634, -0.37519351, ..., -0.37519351,
+        -0.37481634, -0.37443739],
+       [-0.37328012, -0.3736579 , -0.3740339 , ..., -0.3740339 ,
+        -0.3736579 , -0.37328012],
+       ..., 
+       [-0.16294914, -0.16311405, -0.16327819, ..., -0.16327819,
+        -0.16311405, -0.16294914],
+       [-0.16192826, -0.16209214, -0.16225525, ..., -0.16225525,
+        -0.16209214, -0.16192826],
+       [-0.16090779, -0.16107064, -0.16123272, ..., -0.16123272,
+        -0.16107064, -0.16090779]]))
+
+In [137]: xx[-1][xx.shape[0]]/2] 
+------------------------------------------------------------
+   File "<ipython console>", line 1
+     xx[-1][xx.shape[0]]/2]
+                          ^
+SyntaxError: invalid syntax
+
+
+In [138]: xx[-1][xx.shape[0]/2]
+Out[138]: -0.038218625683420791
+
+In [139]: xx[-1][xx.shape[0]/2]*R 
+Out[139]: -243762.21647142616
+
+In [140]: xx[0][50] 
+Out[140]: -0.13271664890186852
+
+In [141]: xx.shape[0]/2 
+Out[141]: 100
+
+In [142]: xx.shape[0] 
+Out[142]: 200
+
+In [143]: xx.shape[1]/2 
+Out[143]: 200
+
+In [144]: xx[0][0] 
+Out[144]: -0.17464460834632878
+
+In [145]: xx[0][-1] 
+Out[145]: 0.17464460834632894
+
+In [146]: plt.plot(range(200),xx[:][0]) 
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+
+/home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/netcdf_global_ocean_export.py in <module>()
+----> 1 
+      2 
+      3 
+      4 
+      5 
+
+/usr/lib/pymodules/python2.7/matplotlib/pyplot.pyc in plot(*args, **kwargs)
+   2139         ax.hold(hold)
+   2140     try:
+-> 2141         ret = ax.plot(*args, **kwargs)
+   2142         draw_if_interactive()
+   2143     finally:
+
+/usr/lib/pymodules/python2.7/matplotlib/axes.pyc in plot(self, *args, **kwargs)
+   3430         lines = []
+   3431 
+-> 3432         for line in self._get_lines(*args, **kwargs):
+   3433             self.add_line(line)
+   3434             lines.append(line)
+
+/usr/lib/pymodules/python2.7/matplotlib/axes.pyc in _grab_next_args(self, *args, **kwargs)
+    309                 return
+    310             if len(remaining) <= 3:
+--> 311                 for seg in self._plot_args(remaining, kwargs):
+    312                     yield seg
+    313                 return
+
+/usr/lib/pymodules/python2.7/matplotlib/axes.pyc in _plot_args(self, tup, kwargs)
+    286             x = np.arange(y.shape[0], dtype=float)
+    287 
+--> 288         x, y = self._xy_from_xy(x, y)
+    289 
+    290         if self.command == 'plot':
+
+/usr/lib/pymodules/python2.7/matplotlib/axes.pyc in _xy_from_xy(self, x, y)
+    226         y = np.atleast_1d(y)
+    227         if x.shape[0] != y.shape[0]:
+--> 228             raise ValueError("x and y must have same first dimension")
+    229         if x.ndim > 2 or y.ndim > 2:
+    230             raise ValueError("x and y can be no greater than 2-D")
+
+ValueError: x and y must have same first dimension
+
+In [147]: xx[:][0].shape 
+Out[147]: (400,)
+
+In [148]: plt.plot(range(400),xx[:][0])
+Out[148]: [<matplotlib.lines.Line2D object at 0x2ccbd8cc>]
+
+In [149]: plt.show() 
+
+In [150]: plt.figure() 
+Out[150]: <matplotlib.figure.Figure object at 0x3647166c>
+
+In [151]: plt.plot(range(400),xx[:][0]) 
+Out[151]: [<matplotlib.lines.Line2D object at 0x364a3d2c>]
+
+In [152]: xx[200][0] 
+---------------------------------------------------------------------------
+IndexError                                Traceback (most recent call last)
+
+/home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/netcdf_global_ocean_export.py in <module>()
+----> 1 
+      2 
+      3 
+      4 
+      5 
+
+IndexError: index out of bounds
+
+In [153]: xx.shape 
+Out[153]: (200, 400)
+
+In [154]: xx[:][,0] 
+------------------------------------------------------------
+   File "<ipython console>", line 1
+     xx[:][,0]
+           ^
+SyntaxError: invalid syntax
+
+
+In [155]: xx[:][:,0]
+Out[155]: 
+array([-0.17464461, -0.17410601, -0.17356791, -0.17303028, -0.17249313,
+       -0.17195647, -0.17142028, -0.17088457, -0.17034933, -0.16981456,
+       -0.16928026, -0.16874643, -0.16821307, -0.16768017, -0.16714773,
+       -0.16661575, -0.16608423, -0.16555317, -0.16502256, -0.1644924 ,
+       -0.1639627 , -0.16343344, -0.16290464, -0.16237627, -0.16184836,
+       -0.16132088, -0.16079384, -0.16026724, -0.15974108, -0.15921536,
+       -0.15869006, -0.1581652 , -0.15764077, -0.15711676, -0.15659318,
+       -0.15607002, -0.15554729, -0.15502498, -0.15450308, -0.15398161,
+       -0.15346054, -0.1529399 , -0.15241966, -0.15189983, -0.15138042,
+       -0.15086141, -0.1503428 , -0.1498246 , -0.14930679, -0.14878939,
+       -0.14827239, -0.14775578, -0.14723957, -0.14672375, -0.14620833,
+       -0.14569329, -0.14517864, -0.14466438, -0.1441505 , -0.143637  ,
+       -0.14312389, -0.14261116, -0.1420988 , -0.14158682, -0.14107522,
+       -0.14056399, -0.14005313, -0.13954264, -0.13903252, -0.13852277,
+       -0.13801338, -0.13750435, -0.13699569, -0.13648739, -0.13597945,
+       -0.13547186, -0.13496463, -0.13445775, -0.13395123, -0.13344506,
+       -0.13293923, -0.13243376, -0.13192863, -0.13142384, -0.1309194 ,
+       -0.1304153 , -0.12991154, -0.12940812, -0.12890504, -0.12840229,
+       -0.12789987, -0.12739779, -0.12689604, -0.12639462, -0.12589352,
+       -0.12539276, -0.12489231, -0.12439219, -0.12389239, -0.12339292,
+       -0.12289376, -0.12239492, -0.12189639, -0.12139818, -0.12090028,
+       -0.12040269, -0.11990542, -0.11940845, -0.11891178, -0.11841543,
+       -0.11791937, -0.11742362, -0.11692818, -0.11643303, -0.11593818,
+       -0.11544362, -0.11494936, -0.1144554 , -0.11396173, -0.11346834,
+       -0.11297525, -0.11248245, -0.11198993, -0.1114977 , -0.11100575,
+       -0.11051409, -0.1100227 , -0.1095316 , -0.10904077, -0.10855022,
+       -0.10805995, -0.10756995, -0.10708022, -0.10659077, -0.10610158,
+       -0.10561266, -0.10512401, -0.10463563, -0.10414751, -0.10365965,
+       -0.10317205, -0.10268472, -0.10219764, -0.10171082, -0.10122426,
+       -0.10073795, -0.1002519 , -0.09976609, -0.09928054, -0.09879524,
+       -0.09831018, -0.09782538, -0.09734081, -0.09685649, -0.09637242,
+       -0.09588858, -0.09540499, -0.09492163, -0.09443851, -0.09395563,
+       -0.09347298, -0.09299057, -0.09250839, -0.09202643, -0.09154471,
+       -0.09106322, -0.09058195, -0.09010091, -0.08962009, -0.0891395 ,
+       -0.08865912, -0.08817897, -0.08769904, -0.08721932, -0.08673982,
+       -0.08626054, -0.08578147, -0.08530261, -0.08482396, -0.08434553,
+       -0.0838673 , -0.08338928, -0.08291146, -0.08243386, -0.08195645,
+       -0.08147925, -0.08100224, -0.08052544, -0.08004884, -0.07957243,
+       -0.07909622, -0.07862021, -0.07814439, -0.07766876, -0.07719332,
+       -0.07671807, -0.07624301, -0.07576814, -0.07529345, -0.07481895])
+
+In [156]: xx[:][:,0].shape 
+Out[156]: (200,)
+
+In [157]: plt.plot(range(400),xx[:][:,0])
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+
+/home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/netcdf_global_ocean_export.py in <module>()
+----> 1 
+      2 
+      3 
+      4 
+      5 
+
+/usr/lib/pymodules/python2.7/matplotlib/pyplot.pyc in plot(*args, **kwargs)
+   2139         ax.hold(hold)
+   2140     try:
+-> 2141         ret = ax.plot(*args, **kwargs)
+   2142         draw_if_interactive()
+   2143     finally:
+
+/usr/lib/pymodules/python2.7/matplotlib/axes.pyc in plot(self, *args, **kwargs)
+   3430         lines = []
+   3431 
+-> 3432         for line in self._get_lines(*args, **kwargs):
+   3433             self.add_line(line)
+   3434             lines.append(line)
+
+/usr/lib/pymodules/python2.7/matplotlib/axes.pyc in _grab_next_args(self, *args, **kwargs)
+    309                 return
+    310             if len(remaining) <= 3:
+--> 311                 for seg in self._plot_args(remaining, kwargs):
+    312                     yield seg
+    313                 return
+
+/usr/lib/pymodules/python2.7/matplotlib/axes.pyc in _plot_args(self, tup, kwargs)
+    286             x = np.arange(y.shape[0], dtype=float)
+    287 
+--> 288         x, y = self._xy_from_xy(x, y)
+    289 
+    290         if self.command == 'plot':
+
+/usr/lib/pymodules/python2.7/matplotlib/axes.pyc in _xy_from_xy(self, x, y)
+    226         y = np.atleast_1d(y)
+    227         if x.shape[0] != y.shape[0]:
+--> 228             raise ValueError("x and y must have same first dimension")
+    229         if x.ndim > 2 or y.ndim > 2:
+    230             raise ValueError("x and y can be no greater than 2-D")
+
+ValueError: x and y must have same first dimension
+
+In [158]: plt.plot(range(200),xx[:][:,0])
+Out[158]: [<matplotlib.lines.Line2D object at 0xd70562c>]
+
+In [159]: plt.cla() 
+
+In [160]: plt.plot(range(200),xx[:][:,0]) 
+Out[160]: [<matplotlib.lines.Line2D object at 0x36673b4c>]
+
+In [161]: run netcdf_global_ocean_export.py 
+ 
+In [162]: nf = NcomNetcdf('ncom_glb_sfcurrents_2011060900.nc')
+ 
+In [163]: nf.set_grid_region() 
+ 
+Out[163]: <__main__.NcomNetcdf instance at 0x10a925ec>
+ 
+In [164]:  
+ 
+In [165]: nf.exp 
+nf.export_nc   nf.export_txt  
+
+In [165]: nf.export_nc() 
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+
+/home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/netcdf_global_ocean_export.py in <module>()
+----> 1 
+      2 
+      3 
+      4 
+      5 
+
+/home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/netcdf_global_ocean_export.py in export_nc(self)
+    113     netfilename = self.dirname + "_AK_stereo.nc"
+    114     netfile = nc.NetCDFFile(netfilename,'w')
+--> 115     net_dims = (netfile.createDimension('t',u.shape[0]),
+    116                 netfile.createDimension('y',u.shape[1]),
+    117                 netfile.createDimension('x',u.shape[2]))
+
+NameError: global name 'u' is not defined
+
+In [166]: nfile.x.shape 
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+
+/home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/netcdf_global_ocean_export.py in <module>()
+----> 1 
+      2 
+      3 
+      4 
+      5 
+
+NameError: name 'nfile' is not defined
+
+In [167]: nf.x.shape 
+Out[167]: (200, 400)
+
+In [168]: nf.basemap.quiver(nf.x,nf.y,nf.u[0],nf.v[0]) 
+Out[168]: <matplotlib.quiver.Quiver object at 0x330a252c>
+
+In [169]: plt.shoplplkkk
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+
+/home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/netcdf_global_ocean_export.py in <module>()
+----> 1 
+      2 
+      3 
+      4 
+      5 
+
+AttributeError: 'module' object has no attribute 'shoplplkkk'
+
+In [170]:     x,y = stereo_proj(self.lon,self.lat) 
+   .....:  
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+
+/home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/netcdf_global_ocean_export.py in <module>()
+      1 
+----> 2 
+      3 
+      4 
+      5 
+
+NameError: name 'self' is not defined
+
+In [171]:     x,y = stereo_proj(nf.lon,nf.lat) 
+   .....:  
+
+In [172]:     wd = abs(x[0][0] - x[0][-1]) 
+   .....:  
+
+In [173]: wd 
+Out[173]: 1.0179033724764173
+
+In [174]:     ymid0 = (y[0][ y.shape[1]/2 ] + y[0][ y.shape[1]/2 +1 ])/2
+   .....:     ymid1 = (y[-1][ y.shape[1]/2 ] + y[-1][ y.shape[1]/2 +1 ])/2
+   .....:     ht = abs(ymid1 - ymid0) 
+   .....:  
+
+In [175]: ht 
+Out[175]: 3.1443804936362625
+
+In [176]: plt.quiver(nf.x,nf.y,nf.u[0],nf.v[0]) 
+Out[176]: <matplotlib.quiver.Quiver object at 0x398645cc>
+
+In [177]: plt.cla() 
+
+In [178]: plt.quiver(nf.x,nf.y,nf.u[0],nf.v[0]) 
+Out[178]: <matplotlib.quiver.Quiver object at 0x398600ac>
+
+In [179]: nf.x[0][100] 
+Out[179]: -986233.34461102064
+
+In [180]: nf.x.shape 
+Out[180]: (200, 400)
+
+In [181]: nf.x[100][0] 
+Out[181]: -1463016.2418279278
+
+In [182]: np.min(nf.x) 
+Out[182]: -1957115.8619048707
+
+In [183]: np.min(np.abs(nf.x)) 
+Out[183]: 2419.0546785258166
+
+In [184]: np.min(np.abs(nf.y))
+Out[184]: 113.28457501328634
+
+In [185]: from scipy.interpolate import griddata 
+
+In [186]: griddata? 
+Type:             function
+Base Class:       <type 'function'>
+String Form:   <function griddata at 0x3fe161b4>
+Namespace:        Interactive
+File:             /usr/local/lib/python2.7/dist-packages/scipy/interpolate/ndgriddata.py
+Definition:       griddata(points, values, xi, method='linear', fill_value=nan)
+Docstring:
+    Interpolate unstructured N-dimensional data.
+    
+    .. versionadded:: 0.9
+    
+    Parameters
+    ----------
+    points : ndarray of floats, shape (npoints, ndims)
+        Data point coordinates. Can either be a ndarray of
+        size (npoints, ndim), or a tuple of `ndim` arrays.
+    
+        For interpolation of 1-D data, the points *must* be sorted
+        in ascending order.
+    values : ndarray of float or complex, shape (npoints, ...)
+        Data values.
+    xi : ndarray of float, shape (..., ndim)
+        Points where to interpolate data at.
+    
+    method : {'linear', 'nearest', 'cubic'}
+        Method of interpolation. One of
+    
+        - ``nearest``: return the value at the data point closest to
+          the point of interpolation.  See `NearestNDInterpolator` for
+          more details.
+    
+        - ``linear``: tesselate the input point set to n-dimensional
+          simplices, and interpolate linearly on each simplex.  See
+          `LinearNDInterpolator` for more details.
+    
+        - ``cubic`` (1-D): return the value detemined from a cubic
+          spline.
+    
+        - ``cubic`` (2-D): return the value determined from a
+          piecewise cubic, continuously differentiable (C1), and
+          approximately curvature-minimizing polynomial surface. See
+          `CloughTocher2DInterpolator` for more details.
+    
+    fill_value : float, optional
+        Value used to fill in for requested points outside of the
+        convex hull of the input points.  If not provided, then the
+        default is ``nan``. This option has no effect for the
+        'nearest' method.
+    
+    
+    Examples
+    --------
+    
+    Suppose we want to interpolate the 2-D function
+    
+    >>> def func(x, y):
+    >>>     return x*(1-x)*np.cos(4*np.pi*x) * np.sin(4*np.pi*y**2)**2
+    
+    on a grid in [0, 1]x[0, 1]
+    
+    >>> grid_x, grid_y = np.mgrid[0:1:100j, 0:1:200j]
+    
+    but we only know its values at 1000 data points:
+    
+    >>> points = np.random.rand(1000, 2)
+    >>> values = func(points[:,0], points[:,1])
+    
+    This can be done with `griddata` -- below we try out all of the
+    interpolation methods:
+    
+    >>> from scipy.interpolate import griddata
+
+In [187]: x[100][200] 
+Out[187]: 0.74257067503946739
+
+In [188]: nf.x[100][200] 
+Out[188]: 3734.569793387941
+
+In [189]: nf.y[100][200] 
+Out[189]: 6952.9695885426136
+
+In [190]: nf.y[100][400]
+---------------------------------------------------------------------------
+IndexError                                Traceback (most recent call last)
+
+/home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/netcdf_global_ocean_export.py in <module>()
+----> 1 
+      2 
+      3 
+      4 
+      5 
+
+IndexError: index out of bounds
+
+In [191]: nf.y[200][100]
+---------------------------------------------------------------------------
+IndexError                                Traceback (most recent call last)
+
+/home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/netcdf_global_ocean_export.py in <module>()
+----> 1 
+      2 
+      3 
+      4 
+      5 
+
+IndexError: index out of bounds
+
+In [192]: nf.y.shape 
+Out[192]: (200, 400)
+
+In [193]: nf.y[100][200] 
+Out[193]: 6952.9695885426136
+
+In [194]: nf.y[0][200]
+Out[194]: -1388438.9846982497
+
+In [195]: nf.y[0][200]-nf.y[1][200] 
+Out[195]: -14062.72472156235
+
+In [196]: nf.x[0][200]-nf.x[0][201] 
+Out[196]: -9945.0177016057805
+
+In [197]: abs(x[-1]-x[0])/1000 
+Out[197]: 
+array([  1.97229893e-19,   3.51369066e-06,   7.02737714e-06,
+         1.05410553e-05,   1.40547208e-05,   1.75683697e-05,
+         2.10819976e-05,   2.45956005e-05,   2.81091741e-05,
+         3.16227142e-05,   3.51362168e-05,   3.86496775e-05,
+         4.21630922e-05,   4.56764567e-05,   4.91897669e-05,
+         5.27030186e-05,   5.62162076e-05,   5.97293296e-05,
+         6.32423806e-05,   6.67553564e-05,   7.02682527e-05,
+         7.37810654e-05,   7.72937903e-05,   8.08064232e-05,
+         8.43189600e-05,   8.78313964e-05,   9.13437283e-05,
+         9.48559516e-05,   9.83680619e-05,   1.01880055e-04,
+         1.05391927e-04,   1.08903674e-04,   1.12415291e-04,
+         1.15926774e-04,   1.19438120e-04,   1.22949323e-04,
+         1.26460380e-04,   1.29971287e-04,   1.33482038e-04,
+         1.36992631e-04,   1.40503061e-04,   1.44013324e-04,
+         1.47523416e-04,   1.51033332e-04,   1.54543068e-04,
+         1.58052620e-04,   1.61561984e-04,   1.65071156e-04,
+         1.68580132e-04,   1.72088907e-04,   1.75597477e-04,
+         1.79105838e-04,   1.82613987e-04,   1.86121917e-04,
+         1.89629627e-04,   1.93137110e-04,   1.96644364e-04,
+         2.00151384e-04,   2.03658166e-04,   2.07164705e-04,
+         2.10670998e-04,   2.14177041e-04,   2.17682828e-04,
+         2.21188356e-04,   2.24693622e-04,   2.28198619e-04,
+         2.31703346e-04,   2.35207796e-04,   2.38711967e-04,
+         2.42215854e-04,   2.45719452e-04,   2.49222758e-04,
+         2.52725767e-04,   2.56228476e-04,   2.59730880e-04,
+         2.63232975e-04,   2.66734757e-04,   2.70236221e-04,
+         2.73737363e-04,   2.77238180e-04,   2.80738667e-04,
+         2.84238820e-04,   2.87738635e-04,   2.91238107e-04,
+         2.94737233e-04,   2.98236008e-04,   3.01734429e-04,
+         3.05232490e-04,   3.08730188e-04,   3.12227519e-04,
+         3.15724478e-04,   3.19221061e-04,   3.22717265e-04,
+         3.26213084e-04,   3.29708516e-04,   3.33203555e-04,
+         3.36698197e-04,   3.40192439e-04,   3.43686277e-04,
+         3.47179705e-04,   3.50672720e-04,   3.54165318e-04,
+         3.57657494e-04,   3.61149245e-04,   3.64640566e-04,
+         3.68131453e-04,   3.71621902e-04,   3.75111909e-04,
+         3.78601470e-04,   3.82090580e-04,   3.85579236e-04,
+         3.89067432e-04,   3.92555166e-04,   3.96042433e-04,
+         3.99529228e-04,   4.03015548e-04,   4.06501388e-04,
+         4.09986745e-04,   4.13471614e-04,   4.16955991e-04,
+         4.20439871e-04,   4.23923252e-04,   4.27406128e-04,
+         4.30888495e-04,   4.34370350e-04,   4.37851688e-04,
+         4.41332504e-04,   4.44812796e-04,   4.48292558e-04,
+         4.51771787e-04,   4.55250479e-04,   4.58728628e-04,
+         4.62206232e-04,   4.65683286e-04,   4.69159786e-04,
+         4.72635727e-04,   4.76111106e-04,   4.79585919e-04,
+         4.83060161e-04,   4.86533828e-04,   4.90006916e-04,
+         4.93479421e-04,   4.96951339e-04,   5.00422665e-04,
+         5.03893397e-04,   5.07363528e-04,   5.10833056e-04,
+         5.14301976e-04,   5.17770284e-04,   5.21237976e-04,
+         5.24705047e-04,   5.28171495e-04,   5.31637313e-04,
+         5.35102500e-04,   5.38567049e-04,   5.42030958e-04,
+         5.45494221e-04,   5.48956836e-04,   5.52418797e-04,
+         5.55880101e-04,   5.59340744e-04,   5.62800721e-04,
+         5.66260028e-04,   5.69718662e-04,   5.73176617e-04,
+         5.76633891e-04,   5.80090479e-04,   5.83546376e-04,
+         5.87001579e-04,   5.90456083e-04,   5.93909885e-04,
+         5.97362980e-04,   6.00815364e-04,   6.04267033e-04,
+         6.07717984e-04,   6.11168211e-04,   6.14617711e-04,
+         6.18066479e-04,   6.21514512e-04,   6.24961806e-04,
+         6.28408356e-04,   6.31854158e-04,   6.35299209e-04,
+         6.38743503e-04,   6.42187037e-04,   6.45629808e-04,
+         6.49071810e-04,   6.52513039e-04,   6.55953492e-04,
+         6.59393165e-04,   6.62832053e-04,   6.66270152e-04,
+         6.69707459e-04,   6.73143969e-04,   6.76579677e-04,
+         6.80014581e-04,   6.83448675e-04,   6.86881956e-04,
+         6.90314420e-04,   6.93746063e-04,   6.97176880e-04,
+         7.00606867e-04,   7.04036021e-04,   7.07464337e-04,
+         7.10891811e-04,   7.14318439e-04,   7.17744218e-04,
+         7.21169142e-04,   7.24593208e-04,   7.28016412e-04,
+         7.31438749e-04,   7.34860217e-04,   7.38280809e-04,
+         7.41700524e-04,   7.45119356e-04,   7.48537301e-04,
+         7.51954355e-04,   7.55370515e-04,   7.58785776e-04,
+         7.62200134e-04,   7.65613585e-04,   7.69026125e-04,
+         7.72437750e-04,   7.75848456e-04,   7.79258239e-04,
+         7.82667094e-04,   7.86075018e-04,   7.89482007e-04,
+         7.92888056e-04,   7.96293162e-04,   7.99697320e-04,
+         8.03100527e-04,   8.06502778e-04,   8.09904070e-04,
+         8.13304398e-04,   8.16703758e-04,   8.20102146e-04,
+         8.23499558e-04,   8.26895991e-04,   8.30291439e-04,
+         8.33685900e-04,   8.37079368e-04,   8.40471841e-04,
+         8.43863313e-04,   8.47253781e-04,   8.50643242e-04,
+         8.54031690e-04,   8.57419121e-04,   8.60805533e-04,
+         8.64190920e-04,   8.67575279e-04,   8.70958605e-04,
+         8.74340896e-04,   8.77722145e-04,   8.81102351e-04,
+         8.84481508e-04,   8.87859612e-04,   8.91236660e-04,
+         8.94612648e-04,   8.97987571e-04,   9.01361425e-04,
+         9.04734207e-04,   9.08105912e-04,   9.11476537e-04,
+         9.14846077e-04,   9.18214529e-04,   9.21581888e-04,
+         9.24948151e-04,   9.28313313e-04,   9.31677370e-04,
+         9.35040318e-04,   9.38402154e-04,   9.41762874e-04,
+         9.45122473e-04,   9.48480947e-04,   9.51838292e-04,
+         9.55194505e-04,   9.58549582e-04,   9.61903517e-04,
+         9.65256309e-04,   9.68607951e-04,   9.71958441e-04,
+         9.75307775e-04,   9.78655948e-04,   9.82002956e-04,
+         9.85348796e-04,   9.88693464e-04,   9.92036955e-04,
+         9.95379265e-04,   9.98720392e-04,   1.00206033e-03,
+         1.00539907e-03,   1.00873662e-03,   1.01207297e-03,
+         1.01540812e-03,   1.01874205e-03,   1.02207478e-03,
+         1.02540629e-03,   1.02873657e-03,   1.03206564e-03,
+         1.03539347e-03,   1.03872008e-03,   1.04204544e-03,
+         1.04536957e-03,   1.04869245e-03,   1.05201409e-03,
+         1.05533447e-03,   1.05865360e-03,   1.06197147e-03,
+         1.06528808e-03,   1.06860341e-03,   1.07191748e-03,
+         1.07523027e-03,   1.07854178e-03,   1.08185201e-03,
+         1.08516095e-03,   1.08846860e-03,   1.09177495e-03,
+         1.09508001e-03,   1.09838376e-03,   1.10168620e-03,
+         1.10498734e-03,   1.10828716e-03,   1.11158566e-03,
+         1.11488283e-03,   1.11817868e-03,   1.12147320e-03,
+         1.12476639e-03,   1.12805824e-03,   1.13134874e-03,
+         1.13463790e-03,   1.13792571e-03,   1.14121216e-03,
+         1.14449726e-03,   1.14778100e-03,   1.15106337e-03,
+         1.15434437e-03,   1.15762399e-03,   1.16090224e-03,
+         1.16417911e-03,   1.16745459e-03,   1.17072868e-03,
+         1.17400138e-03,   1.17727268e-03,   1.18054259e-03,
+         1.18381108e-03,   1.18707817e-03,   1.19034385e-03,
+         1.19360811e-03,   1.19687095e-03,   1.20013236e-03,
+         1.20339235e-03,   1.20665090e-03,   1.20990802e-03,
+         1.21316370e-03,   1.21641794e-03,   1.21967073e-03,
+         1.22292207e-03,   1.22617195e-03,   1.22942037e-03,
+         1.23266733e-03,   1.23591282e-03,   1.23915685e-03,
+         1.24239940e-03,   1.24564047e-03,   1.24888005e-03,
+         1.25211816e-03,   1.25535477e-03,   1.25858989e-03,
+         1.26182351e-03,   1.26505563e-03,   1.26828624e-03,
+         1.27151534e-03,   1.27474294e-03,   1.27796901e-03,
+         1.28119356e-03,   1.28441659e-03,   1.28763809e-03,
+         1.29085806e-03,   1.29407650e-03,   1.29729339e-03,
+         1.30050874e-03,   1.30372254e-03,   1.30693479e-03,
+         1.31014549e-03,   1.31335463e-03,   1.31656220e-03,
+         1.31976821e-03,   1.32297264e-03,   1.32617551e-03,
+         1.32937679e-03,   1.33257649e-03,   1.33577461e-03,
+         1.33897114e-03,   1.34216607e-03,   1.34535941e-03,
+         1.34855115e-03,   1.35174128e-03,   1.35492980e-03,
+         1.35811671e-03])
+
+In [198]: abs(x[0][-1]-x[0][0])/1000
+Out[198]: 0.0010179033724764172
+
+In [199]: abs(nf.x[0][-1]-nf.x[0][0])
+Out[199]: 3914232.7417131118
+
+In [200]: abs(nf.x[0][-1]-nf.x[0][0])/1000 
+Out[200]: 3914.2327417131119
+
+In [201]: for i in nf.x.shape[0] 
+------------------------------------------------------------
+   File "<ipython console>", line 1
+     for i in nf.x.shape[0]
+                           ^
+SyntaxError: invalid syntax
+
+
+In [202]: for i in nf.x.shape[0]: 
+   .....:     for j in nf.x.shape[1]: 
+   .....:         points.push( (x[i][j],y[i][j]) ) 
+   .....:          
+   .....:          
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+
+/home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/netcdf_global_ocean_export.py in <module>()
+----> 1 
+      2 
+      3 
+      4 
+      5 
+
+TypeError: 'int' object is not iterable
+
+In [203]: points = [] 
+
+In [204]: for i in nf.x.shape[0]:
+    for j in nf.x.shape[1]:
+        points.push( (x[i][j],y[i][j]) ) 
+   .....:          
+   .....:          
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+
+/home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/netcdf_global_ocean_export.py in <module>()
+----> 1 
+      2 
+      3 
+      4 
+      5 
+
+TypeError: 'int' object is not iterable
+
+In [207]: for i in range(nf.x.shape[0]): 
+    for j in range(nf.x.shape[1]):
+        points.push( (x[i][j],y[i][j]) ) 
+   .....:          
+   .....:          
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+
+/home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/netcdf_global_ocean_export.py in <module>()
+      1 
+      2 
+----> 3 
+      4 
+      5 
+
+AttributeError: 'list' object has no attribute 'push'
+
+In [210]: points = [] 
+
+In [211]: points. 
+points.__add__           points.__format__        points.__imul__          points.__new__           points.__setslice__      points.insert
+points.__class__         points.__ge__            points.__init__          points.__reduce__        points.__sizeof__        points.pop
+points.__contains__      points.__getattribute__  points.__iter__          points.__reduce_ex__     points.__str__           points.remove
+points.__delattr__       points.__getitem__       points.__le__            points.__repr__          points.__subclasshook__  points.reverse
+points.__delitem__       points.__getslice__      points.__len__           points.__reversed__      points.append            points.sort
+points.__delslice__      points.__gt__            points.__lt__            points.__rmul__          points.count             
+points.__doc__           points.__hash__          points.__mul__           points.__setattr__       points.extend            
+points.__eq__            points.__iadd__          points.__ne__            points.__setitem__       points.index             
+
+In [211]: points. 
+points.__add__           points.__format__        points.__imul__          points.__new__           points.__setslice__      points.insert
+points.__class__         points.__ge__            points.__init__          points.__reduce__        points.__sizeof__        points.pop
+points.__contains__      points.__getattribute__  points.__iter__          points.__reduce_ex__     points.__str__           points.remove
+points.__delattr__       points.__getitem__       points.__le__            points.__repr__          points.__subclasshook__  points.reverse
+points.__delitem__       points.__getslice__      points.__len__           points.__reversed__      points.append            points.sort
+points.__delslice__      points.__gt__            points.__lt__            points.__rmul__          points.count             
+points.__doc__           points.__hash__          points.__mul__           points.__setattr__       points.extend            
+points.__eq__            points.__iadd__          points.__ne__            points.__setitem__       points.index             
+
+In [211]: for i in range(nf.x.shape[0]):
+    for j in range(nf.x.shape[1]):
+        points.append( (x[i][j],y[i][j]) )
+   .....:          
+   .....:          
+ 
+In [214]: points.shape 
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+
+/home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/netcdf_global_ocean_export.py in <module>()
+----> 1 
+      2 
+      3 
+      4 
+      5 
+
+AttributeError: 'list' object has no attribute 'shape'
+
+In [215]: points[0] 
+Out[215]: (1.4782306339831242e-16, -2.4142135623730949)
+
+In [216]: for i in range(nf.x.shape[0]):
+    for j in range(nf.x.shape[1]):
+        points.append( (nf.x[i][j],nf.y[i][j]) )
+   .....:          
+   .....:          
+ 
+In [219]: points[0] 
+Out[219]: (1.4782306339831242e-16, -2.4142135623730949)
+
+In [220]: points = [] 
+
+In [221]: for i in range(nf.x.shape[0]):
+    for j in range(nf.x.shape[1]):
+        points.append( (nf.x[i][j],nf.y[i][j]) ) 
+   .....:          
+   .....:          
+ 
+In [224]: points[0] 
+Out[224]: (-1957115.8619048707, -1049087.2505493308)
+
+In [225]: vals = [] 
+
+In [226]: for i in range(nf.x.shape[0]):
+    for j in range(nf.x.shape[1]): 
+        vals.append(u[0][i][j])
+   .....:          
+   .....:          
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+
+/home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/netcdf_global_ocean_export.py in <module>()
+      1 
+      2 
+----> 3 
+      4 
+      5 
+
+NameError: name 'u' is not defined
+
+In [229]: for i in range(nf.x.shape[0]):
+    for j in range(nf.x.shape[1]):
+        vals.append(nf.u[0][i][j])
+   .....:          
+   .....:          
+ 
+In [232]: grid_x,grid_y = np.mgrid[nf.x[0]:nf.x[-1]:1000j, nf.y[0]:nf.y[-1]:500j] 
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+
+/home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/netcdf_global_ocean_export.py in <module>()
+----> 1 
+      2 
+      3 
+      4 
+      5 
+
+/usr/lib/pymodules/python2.7/numpy/lib/index_tricks.pyc in __getitem__(self, key)
+    234                     if step != 1:
+    235                         step = (key[k].stop - start)/float(step-1)
+--> 236                 nn[k] = (nn[k]*step+start)
+    237             if self.sparse:
+    238                 slobj = [_nx.newaxis]*len(size)
+
+ValueError: shape mismatch: objects cannot be broadcast to a single shape
+
+In [233]: grid_x,grid_y = np.mgrid[nf.x[0][0]:nf.x[0][-1]:1000j, nf.y[0][0]:nf.y[0][-1]:500j]
+ 
+In [234]: grid_x.shape 
+Out[234]: (1000, 500)
+
+In [235]: interp_u = griddata(points,vals,(grid_x,grid_y),method='linear') 
+ 
+In [236]: plt.figure() 
+Out[236]: <matplotlib.figure.Figure object at 0x40405aac>
+
+In [237]: plt.ims 
+plt.imsave  plt.imshow  
+
+In [237]: plt.imshow(nf.u[0]) 
+Out[237]: <matplotlib.image.AxesImage object at 0x409b2f8c>
+
+In [238]: plt.figure() 
+Out[238]: <matplotlib.figure.Figure object at 0x409c082c>
+
+In [239]: plt.imshow(inter 
+intern    interp_u  
+
+In [239]: plt.imshow(interp_u) 
+Out[239]: <matplotlib.image.AxesImage object at 0x40922e0c>
+
+In [240]: plt.imshow(nf.x,nf.y,nf.u[0]) 
+---------------------------------------------------------------------------
+AssertionError                            Traceback (most recent call last)
+
+/home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/netcdf_global_ocean_export.py in <module>()
+----> 1 
+      2 
+      3 
+      4 
+      5 
+
+/usr/lib/pymodules/python2.7/matplotlib/pyplot.pyc in imshow(X, cmap, norm, aspect, interpolation, alpha, vmin, vmax, origin, extent, shape, filternorm, filte
+rrad, imlim, resample, url, hold, **kwargs)
+   2044         ax.hold(hold)
+   2045     try:
+-> 2046         ret = ax.imshow(X, cmap, norm, aspect, interpolation, alpha, vmin, vmax, origin, extent, shape, filternorm, filterrad, imlim, resample, url, *
+*kwargs)
+   2047         draw_if_interactive()
+   2048     finally:
+
+/usr/lib/pymodules/python2.7/matplotlib/axes.pyc in imshow(self, X, cmap, norm, aspect, interpolation, alpha, vmin, vmax, origin, extent, shape, filternorm, f
+ilterrad, imlim, resample, url, **kwargs)
+   6266         if not self._hold: self.cla()
+   6267 
+-> 6268         if norm is not None: assert(isinstance(norm, mcolors.Normalize))
+   6269         if aspect is None: aspect = rcParams['image.aspect']
+   6270         self.set_aspect(aspect)
+
+AssertionError: 
+
+In [241]: plt.imshow? 
+Type:             function
+Base Class:       <type 'function'>
+String Form:   <function imshow at 0xa13a7d4>
+Namespace:        Interactive
+File:             /usr/lib/pymodules/python2.7/matplotlib/pyplot.py
+Definition:       plt.imshow(X, cmap=None, norm=None, aspect=None, interpolation=None, alpha=1.0, vmin=None, vmax=None, origin=None, extent=None, shape=None, 
+filternorm=1, filterrad=4.0, imlim=None, resample=None, url=None, hold=None, **kwargs)
+Docstring:
+    call signature::
+    
+      imshow(X, cmap=None, norm=None, aspect=None, interpolation=None,
+             alpha=1.0, vmin=None, vmax=None, origin=None, extent=None,
+             **kwargs)
+    
+    Display the image in *X* to current axes.  *X* may be a float
+    array, a uint8 array or a PIL image. If *X* is an array, *X*
+    can have the following shapes:
+    
+    * MxN -- luminance (grayscale, float array only)
+    * MxNx3 -- RGB (float or uint8 array)
+    * MxNx4 -- RGBA (float or uint8 array)
+    
+    The value for each component of MxNx3 and MxNx4 float arrays should be
+    in the range 0.0 to 1.0; MxN float arrays may be normalised.
+    
+    An :class:`matplotlib.image.AxesImage` instance is returned.
+    
+    Keyword arguments:
+    
+      *cmap*: [ None | Colormap ]
+        A :class:`matplotlib.cm.Colormap` instance, eg. cm.jet.
+        If *None*, default to rc ``image.cmap`` value.
+    
+        *cmap* is ignored when *X* has RGB(A) information
+    
+      *aspect*: [ None | 'auto' | 'equal' | scalar ]
+        If 'auto', changes the image aspect ratio to match that of the axes
+    
+        If 'equal', and *extent* is *None*, changes the axes
+        aspect ratio to match that of the image. If *extent* is
+        not *None*, the axes aspect ratio is changed to match that
+        of the extent.
+    
+        If *None*, default to rc ``image.aspect`` value.
+    
+      *interpolation*:
+    
+        Acceptable values are *None*, 'nearest', 'bilinear',
+          'bicubic', 'spline16', 'spline36', 'hanning', 'hamming',
+          'hermite', 'kaiser', 'quadric', 'catrom', 'gaussian',
+          'bessel', 'mitchell', 'sinc', 'lanczos',
+    
+    
+        If *interpolation* is *None*, default to rc
+        ``image.interpolation``. See also the *filternorm* and
+        *filterrad* parameters
+    
+      *norm*: [ None | Normalize ]
+        An :class:`matplotlib.colors.Normalize` instance; if
+        *None*, default is ``normalization()``.  This scales
+        luminance -> 0-1
+    
+        *norm* is only used for an MxN float array.
+    
+      *vmin*/*vmax*: [ None | scalar ]
+        Used to scale a luminance image to 0-1.  If either is
+        *None*, the min and max of the luminance values will be
+        used.  Note if *norm* is not *None*, the settings for
+        *vmin* and *vmax* will be ignored.
+    
+      *alpha*: scalar
+        The alpha blending value, between 0 (transparent) and 1 (opaque)
+    
+      *origin*: [ None | 'upper' | 'lower' ]
+        Place the [0,0] index of the array in the upper left or lower left
+        corner of the axes. If *None*, default to rc ``image.origin``.
+    
+      *extent*: [ None | scalars (left, right, bottom, top) ]
+        Data limits for the axes.  The default assigns zero-based row,
+        column indices to the *x*, *y* centers of the pixels.
+    
+      *shape*: [ None | scalars (columns, rows) ]
+        For raw buffer images
+    
+      *filternorm*:
+        A parameter for the antigrain image resize filter.  From the
+        antigrain documentation, if *filternorm* = 1, the filter normalizes
+        integer values and corrects the rounding errors. It doesn't do
+        anything with the source floating point values, it corrects only
+        integers according to the rule of 1.0 which means that any sum of
+        pixel weights must be equal to 1.0.  So, the filter function must
+        produce a graph of the proper shape.
+    
+      *filterrad*:
+        The filter radius for filters that have a radius
+        parameter, i.e. when interpolation is one of: 'sinc',
+        'lanczos' or 'blackman'
+    
+    Additional kwargs are :class:`~matplotlib.artist.Artist` properties:
+    
+      alpha: float (0.0 transparent through 1.0 opaque)         
+      animated: [True | False]         
+      axes: an :class:`~matplotlib.axes.Axes` instance         
+      clip_box: a :class:`matplotlib.transforms.Bbox` instance         
+      clip_on: [True | False]         
+      clip_path: [ (:class:`~matplotlib.path.Path`,         :class:`~matplotlib.transforms.Transform`) |         :class:`~matplotlib.patches.Patch` | None ]  
+        corner of the axes. If *None*, default to rc ``image.origin``.
+    
+      *extent*: [ None | scalars (left, right, bottom, top) ]
+        Data limits for the axes.  The default assigns zero-based row,
+        column indices to the *x*, *y* centers of the pixels.
+    
+      *shape*: [ None | scalars (columns, rows) ]
+        For raw buffer images
+    
+      *filternorm*:
+        A parameter for the antigrain image resize filter.  From the
+        antigrain documentation, if *filternorm* = 1, the filter normalizes
+        integer values and corrects the rounding errors. It doesn't do
+        anything with the source floating point values, it corrects only
+        integers according to the rule of 1.0 which means that any sum of
+        pixel weights must be equal to 1.0.  So, the filter function must
+        produce a graph of the proper shape.
+    
+      *filterrad*:
+
+In [242]: plt.con 
+plt.connect   plt.contour   plt.contourf  
+
+In [242]: plt.cont 
+plt.contour   plt.contourf  
+
+In [242]: plt.contour? 
+Type:             function
+Base Class:       <type 'function'>
+String Form:   <function contour at 0xa13a5a4>
+Namespace:        Interactive
+File:             /usr/lib/pymodules/python2.7/matplotlib/pyplot.py
+Definition:       plt.contour(*args, **kwargs)
+Docstring:
+    :func:`~matplotlib.pyplot.contour` and
+    :func:`~matplotlib.pyplot.contourf` draw contour lines and
+    filled contours, respectively.  Except as noted, function
+    signatures and return values are the same for both versions.
+    
+    :func:`~matplotlib.pyplot.contourf` differs from the Matlab
+    (TM) version in that it does not draw the polygon edges,
+    because the contouring engine yields simply connected regions
+    with branch cuts.  To draw the edges, add line contours with
+    calls to :func:`~matplotlib.pyplot.contour`.
+    
+    
+    call signatures::
+    
+      contour(Z)
+    
+    make a contour plot of an array *Z*. The level values are chosen
+    automatically.
+    
+    ::
+    
+      contour(X,Y,Z)
+    
+    *X*, *Y* specify the (*x*, *y*) coordinates of the surface
+    
+    ::
+    
+      contour(Z,N)
+
+In [243]: plt.contour(nf.x,nf.y,nf.u[0]) 
+Out[243]: <matplotlib.contour.ContourSet instance at 0x409d1e4c>
+
+In [244]: plt.contour(nf.x,nf.y,nf.v[0])
+Out[244]: <matplotlib.contour.ContourSet instance at 0x410cbb4c>
+
+In [245]: mask = nf.u[0] == 'nan' 
+
+In [246]: plt.figure() 
+Out[246]: <matplotlib.figure.Figure object at 0x408fc94c>
+
+In [247]: plt.cont 
+plt.contour   plt.contourf  
+
+In [247]: plt.contour(mask) 
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+
+/home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/netcdf_global_ocean_export.py in <module>()
+----> 1 
+      2 
+      3 
+      4 
+      5 
+
+/usr/lib/pymodules/python2.7/matplotlib/pyplot.pyc in contour(*args, **kwargs)
+   1854         ax.hold(hold)
+   1855     try:
+-> 1856         ret = ax.contour(*args, **kwargs)
+   1857         draw_if_interactive()
+   1858     finally:
+
+/usr/lib/pymodules/python2.7/matplotlib/axes.pyc in contour(self, *args, **kwargs)
+   6836         if not self._hold: self.cla()
+   6837         kwargs['filled'] = False
+-> 6838         return mcontour.ContourSet(self, *args, **kwargs)
+   6839     contour.__doc__ = mcontour.ContourSet.contour_doc
+   6840 
+
+/usr/lib/pymodules/python2.7/matplotlib/contour.pyc in __init__(self, ax, *args, **kwargs)
+    572             raise ValueError('Either colors or cmap must be None')
+    573         if self.origin == 'image': self.origin = mpl.rcParams['image.origin']
+--> 574         x, y, z = self._contour_args(*args)        # also sets self.levels,
+    575                                                    #  self.layers
+
+    576         if self.colors is not None:
+
+/usr/lib/pymodules/python2.7/matplotlib/contour.pyc in _contour_args(self, *args)
+    759         if Nargs <= 2:
+    760             z = ma.asarray(args[0], dtype=np.float64)
+--> 761             x, y = self._initialize_x_y(z)
+    762         elif Nargs <=4:
+    763             x,y,z = self._check_xyz(args[:3])
+
+/usr/lib/pymodules/python2.7/matplotlib/contour.pyc in _initialize_x_y(self, z)
+    696         '''
+    697         if z.ndim != 2:
+--> 698             raise TypeError("Input must be a 2D array.")
+    699         else:
+    700             Ny, Nx = z.shape
+
+TypeError: Input must be a 2D array.
+
+In [248]: mask.shape 
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+
+/home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/netcdf_global_ocean_export.py in <module>()
+----> 1 
+      2 
+      3 
+      4 
+      5 
+
+AttributeError: 'bool' object has no attribute 'shape'
+
+In [249]: mask = (nf.u[0] == 'nan') 
+
+In [250]: len(mask) 
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+
+/home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/netcdf_global_ocean_export.py in <module>()
+----> 1 
+      2 
+      3 
+      4 
+      5 
+
+TypeError: object of type 'bool' has no len()
+
+In [251]: type(nf.u[0]) 
+Out[251]: <type 'numpy.ndarray'>
+
+In [252]: mask = np.isnan(nf.u[0])
+
+In [253]: mask.shape 
+Out[253]: (200, 400)
+
+In [254]: plt.cont 
+plt.contour   plt.contourf  
+
+In [254]: plt.contourf(mask) 
+Out[254]: <matplotlib.contour.ContourSet instance at 0x411a00cc>
+
+In [255]: plt.contourf(nf.x,nf.y,mask) 
+Out[255]: <matplotlib.contour.ContourSet instance at 0x410e8b0c>
+
+In [256]: x[0][-1] 
+Out[256]: 1.0179033724764175
+
+In [257]: del x 
+
+In [258]: del y 
+
+In [259]: x 
+xrange  xx      
+
+In [259]: x 
+xrange  xx      
+
+In [259]: nf.x[0][-1] 
+Out[259]: 1957116.879808241
+
+In [260]: nf.x[0][0] 
+Out[260]: -1957115.8619048707
+
+In [261]: abs(nf.x[0][-1] - nf.x[0][0]) 
+Out[261]: 3914232.7417131118
+
+In [262]: abs(nf.x[0][-1] - nf.x[0][0])/abs(nf.x[0][100]-nf.x[0][101]) 
+Out[262]: 397.53106239001602
+
+In [263]: abs(nf.x[0][-1] - nf.x[0][0])/abs(nf.x[-1][100]-nf.x[-1][101])
+Out[263]: 822.67722238229419
+
+In [264]: nf.shape 
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+
+/home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/netcdf_global_ocean_export.py in <module>()
+----> 1 
+      2 
+      3 
+      4 
+      5 
+
+AttributeError: NcomNetcdf instance has no attribute 'shape'
+
+In [265]: nf.u[0].shape 
+Out[265]: (200, 400)
+
+In [266]: abs(nf.x[0][-1] - nf.x[0][0])/abs(nf.x[-1][200]-nf.x[-1][201])
+Out[266]: 808.87301118395237
+
+In [267]: abs(nf.x[0][-1] - nf.x[0][0])/abs(nf.x[0][200]-nf.x[0][201])
+Out[267]: 393.58730765065377
+
+In [268]: abs(nf.x[0][-1] - nf.x[0][0])/abs(nf.x[-1][200]-nf.x[-1][201])
+Out[268]: 808.87301118395237
+
+In [269]: deltax = ceil(abs(nf.x[0][-1] - nf.x[0][0])/abs(nf.x[-1][200]-nf.x[-1][201])) 
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+
+/home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/netcdf_global_ocean_export.py in <module>()
+----> 1 
+      2 
+      3 
+      4 
+      5 
+
+NameError: name 'ceil' is not defined
+
+In [270]: deltax = np.ceil(abs(nf.x[0][-1] - nf.x[0][0])/abs(nf.x[-1][200]-nf.x[-1][201]))
+
+In [271]: deltax 
+Out[271]: 809.0
+
+In [272]: deltax = np.int(np.ceil(abs(nf.x[0][-1] - nf.x[0][0])/abs(nf.x[-1][200]-nf.x[-1][201])))
+
+In [273]: deltax = int(np.ceil(abs(nf.x[0][-1] - nf.x[0][0])/abs(nf.x[-1][200]-nf.x[-1][201])))
+
+In [274]: nf.y[0][-1] 
+Out[274]: -1049087.2505493332
+
+In [275]: nf.y[0][0]
+Out[275]: -1049087.2505493308
+
+In [276]: nf.y[-1][0]
+Out[276]: 1576504.3239779926
+
+In [277]: nf.[0][nf.shape[1]/2] 
+------------------------------------------------------------
+   File "<ipython console>", line 1
+     nf.[0][nf.shape[1]/2]
+        ^
+SyntaxError: invalid syntax
+
+
+In [278]: nf.y[0][nf.shape[1]/2]
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+
+/home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/netcdf_global_ocean_export.py in <module>()
+----> 1 
+      2 
+      3 
+      4 
+      5 
+
+AttributeError: NcomNetcdf instance has no attribute 'shape'
+
+In [279]: nf.y[0][nf.y.shape[1]/2]
+Out[279]: -1388438.9846982497
+
+In [280]: abs(nf.y[-1][0] - nf.y[0][nf.y.shape[1]/2]) 
+Out[280]: 2964943.3086762424
+
+In [281]: abs(nf.y[-1][0] - nf.y[0][nf.y.shape[1]/2])/abs(nf.y[-1][nf.y.shape[1]/2]-nf.y[-2][nf.y.shape[1]/2]) 
+Out[281]: 210.83708085635493
+
+In [282]: nf.y[-1][nf.y.shape[1]/2] 
+Out[282]: 1388445.4453979614
+
+In [283]: nf.y[-2][nf.y.shape[1]/2]
+Out[283]: 1374382.723145151
+
+In [284]: nf.y[-1][nf.y.shape[1]/2]-nf.y[-2][nf.y.shape[1]/2]
+Out[284]: 14062.722252810374
+
+In [285]: deltay = int(np.ceil(abs(nf.y[-1][0] - nf.y[0][nf.y.shape[1]/2])/abs(nf.y[-1][nf.y.shape[1]/2]-nf.y[-2][nf.y.shape[1]/2]))) 
+
+In [286]: deltax,deltay 
+Out[286]: (809, 211)
+
+In [287]: nf.u[0].shape 
+Out[287]: (200, 400)
+
+In [288]: nf.x.shape 
+Out[288]: (200, 400)
+
+In [289]: gridx = mgrid[-2e6:2e6:400] 
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+
+/home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/netcdf_global_ocean_export.py in <module>()
+----> 1 
+      2 
+      3 
+      4 
+      5 
+
+NameError: name 'mgrid' is not defined
+
+In [290]: gridx = np.mgrid[-2e6:2e6:400]
+
+In [291]: gridx,gridy = np.mgrid[-2e6:2e6:400j,-1.5e6:1.7e6:800j] 
+
+In [292]: gridx.shape 
+Out[292]: (400, 800)
+
+In [293]: for i in range(nf.x.shape[0]): 
+   .....:     for j in range(nf.y.shape[1]): 
+   .....:          
+
+KeyboardInterrupt
+
+In [293]: nf.x[0] 
+Out[294]: 
+array([-1957115.86190487, -1947578.10183174, -1938036.14573805,
+       -1928490.01703387, -1918939.73909497, -1909385.335263  ,
+       -1899826.82884563, -1890264.24311676, -1880697.60131668,
+       -1871126.92665221, -1861552.2422969 , -1851973.57139121,
+       -1842390.93704263, -1832804.36232592, -1823213.87028321,
+       -1813619.48392423, -1804021.22622643, -1794419.12013522,
+       -1784813.18856404, -1775203.45439464, -1765589.94047716,
+       -1755972.66963037, -1746351.66464179, -1736726.94826789,
+       -1727098.54323425, -1717466.47223575, -1707830.75793671,
+       -1698191.42297109, -1688548.48994263, -1678901.98142507,
+       -1669251.91996227, -1659598.32806842, -1649941.22822819,
+       -1640280.6428969 , -1630616.59450072, -1620949.10543681,
+       -1611278.1980735 , -1601603.89475048, -1591926.21777896,
+       -1582245.18944181, -1572560.83199381, -1562873.16766175,
+       -1553182.21864462, -1543488.0071138 , -1533790.55521324,
+       -1524089.88505959, -1514386.01874242, -1504678.97832434,
+       -1494968.78584124, -1485255.46330241, -1475539.03269071,
+       -1465819.5159628 , -1456096.93504925, -1446371.31185474,
+       -1436642.66825824, -1426911.02611315, -1417176.40724753,
+       -1407438.83346423, -1397698.32654105, -1387954.90823095,
+       -1378208.60026223, -1368459.42433865, -1358707.40213966,
+       -1348952.55532053, -1339194.90551255, -1329434.4743232 ,
+       -1319671.28333631, -1309905.35411227, -1300136.70818813,
+       -1290365.36707784, -1280591.35227244, -1270814.68524013,
+       -1261035.38742655, -1251253.48025492, -1241468.98512619,
+       -1231681.92341923, -1221892.31649102, -1212100.18567679,
+       -1202305.55229023, -1192508.43762363, -1182708.86294808,
+       -1172906.84951363, -1163102.41854948, -1153295.59126412,
+       -1143486.38884555, -1133674.8324614 , -1123860.94325915,
+       -1114044.7423663 , -1104226.25089051, -1094405.48991981,
+       -1084582.48052274, -1074757.24374857, -1064929.80062742,
+       -1055100.1721705 , -1045268.3793702 , -1035434.44320034,
+       -1025598.38461631, -1015760.22455524, -1005919.98393618,
+        -996077.6836603 ,  -986233.34461102,  -976386.98765421,
+        -966538.63363835,  -956688.30339474,  -946836.01773763,
+        -936981.7974644 ,  -927125.66335578,  -917267.63617596,
+        -907407.73667282,  -897545.98557806,  -887682.40360741,
+        -877817.01146077,  -867949.82982242,  -858080.87936118,
+        -848210.18073057,  -838337.754569  ,  -828463.62149994,
+        -818587.8021321 ,  -808710.31705959,  -798831.18686212,
+        -788950.43210515,  -779068.07334007,  -769184.13110438,
+        -759298.62592188,  -749411.57830279,  -739523.008744  ,
+        -729632.93772918,  -719741.385729  ,  -709848.37320126,
+        -699953.92059111,  -690058.04833122,  -680160.77684189,
+        -670262.12653132,  -660362.11779572,  -650460.77101949,
+        -640558.10657545,  -630654.14482492,  -620748.90611798,
+        -610842.41079361,  -600934.67917985,  -591025.731594  ,
+        -581115.58834278,  -571204.26972254,  -561291.79601936,
+        -551378.1875093 ,  -541463.46445853,  -531547.64712353,
+        -521630.75575124,  -511712.81057927,  -501793.83183603,
+        -491873.83974095,  -481952.85450461,  -472030.89632895,
+        -462107.98540743,  -452184.14192522,  -442259.38605933,
+        -432333.73797885,  -422407.21784508,  -412479.8458117 ,
+        -402551.64202498,  -392622.62662393,  -382692.81974048,
+        -372762.24149966,  -362830.91201976,  -352898.85141251,
+        -342966.07978328,  -333032.61723122,  -323098.48384945,
+        -313163.69972523,  -303228.28494016,  -293292.2595703 ,
+        -283355.64368641,  -273418.45735406,  -263480.72063388,
+        -253542.45358164,  -243603.67624853,  -233664.40868125,
+        -223724.67092221,  -213784.48300975,  -203843.86497824,
+        -193902.83685831,  -183961.41867699,  -174019.63045792,
+        -164077.4922215 ,  -154135.02398506,  -144192.24576305,
+        -134249.17756723,  -124305.83940679,  -114362.25128859,
+        -104418.43321729,   -94474.40519554,   -84530.18722417,
+         -74585.79930231,   -64641.26142765,   -54696.59359655,
+         -44751.81580422,   -34806.94804493,   -24862.01031215,
+         -14917.02259874,    -4972.00489714,     4973.02280051,
+          14918.04050211,    24863.02821552,    34807.9659483 ,
+          44752.83370759,    54697.61149992,    64642.27933102,
+          74586.81720568,    84531.20512753,    94475.42309891,
+         104419.45112066,   114363.26919196,   124306.85731016,
+         134250.1954706 ,   144193.26366642,   154136.04188843,
+         164078.51012487,   174020.64836129,   183962.43658036,
+         193903.85476168,   203844.88288161,   213785.50091312,
+         223725.68882558,   233665.42658462,   243604.6941519 ,
+         253543.47148501,   263481.73853725,   273419.47525743,
+         283356.66158978,   293293.27747367,   303229.30284353,
+         313164.7176286 ,   323099.50175282,   333033.63513459,
+         342967.09768665,   352899.86931588,   362831.92992313,
+         372763.25940303,   382693.83764385,   392623.6445273 ,
+         402552.65992835,   412480.86371507,   422408.23574845,
+         432334.75588222,   442260.4039627 ,   452185.15982859,
+         462109.0033108 ,   472031.91423232,   481953.87240798,
+         491874.85764432,   501794.8497394 ,   511713.82848264,
+         521631.77365461,   531548.6650269 ,   541464.4823619 ,
+         551379.20541267,   561292.81392273,   571205.28762591,
+         581116.60624615,   591026.74949736,   600935.69708321,
+         610843.42869698,   620749.92402135,   630655.16272829,
+         640559.12447882,   650461.78892286,   660363.13569908,
+         670263.14443469,   680161.79474526,   690059.06623458,
+         699954.93849448,   709849.39110463,   719742.40363237,
+         729633.95563255,   739524.02664737,   749412.59620616,
+         759299.64382525,   769185.14900775,   779069.09124344,
+         788951.45000852,   798832.20476549,   808711.33496296,
+         818588.82003546,   828464.63940331,   838338.77247237,
+         848211.19863394,   858081.89726455,   867950.84772579,
+         877818.02936414,   887683.42151078,   897547.00348143,
+         907408.75457619,   917268.65407933,   927126.68125915,
+         936982.81536777,   946837.035641  ,   956689.32129811,
+         966539.65154172,   976388.00555758,   986234.36251439,
+         996078.70156367,  1005921.00183955,  1015761.2424586 ,
+        1025599.40251968,  1035435.46110371,  1045269.39727357,
+        1055101.19007387,  1064930.81853079,  1074758.26165194,
+        1084583.49842611,  1094406.50782317,  1104227.26879388,
+        1114045.76026967,  1123861.96116252,  1133675.85036476,
+        1143487.40674892,  1153296.60916749,  1163103.43645285,
+        1172907.867417  ,  1182709.88085145,  1192509.45552699,
+        1202306.5701936 ,  1212101.20358016,  1221893.33439439,
+        1231682.9413226 ,  1241470.00302956,  1251254.49815829,
+        1261036.40532992,  1270815.70314349,  1280592.3701758 ,
+        1290366.38498122,  1300137.72609149,  1309906.37201563,
+        1319672.30123968,  1329435.49222657,  1339195.92341592,
+        1348953.5732239 ,  1358708.42004303,  1368460.44224202,
+        1378209.6181656 ,  1387955.92613432,  1397699.34444442,
+        1407439.8513676 ,  1417177.4251509 ,  1426912.04401652,
+        1436643.68616161,  1446372.32975811,  1456097.95295262,
+        1465820.53386617,  1475540.05059408,  1485256.48120578,
+        1494969.80374461,  1504679.99622771,  1514387.03664579,
+        1524090.90296296,  1533791.57311661,  1543489.02501717,
+        1553183.23654798,  1562874.18556511,  1572561.84989718,
+        1582246.20734518,  1591927.23568233,  1601604.91265385,
+        1611279.21597687,  1620950.12334018,  1630617.61240409,
+        1640281.66080027,  1649942.24613156,  1659599.34597179,
+        1669252.93786564,  1678902.99932844,  1688549.507846  ,
+        1698192.44087445,  1707831.77584008,  1717467.49013912,
+        1727099.56113762,  1736727.96617126,  1746352.68254516,
+        1755973.68753374,  1765590.95838053,  1775204.47229801,
+        1784814.20646741,  1794420.13803859,  1804022.2441298 ,
+        1813620.50182759,  1823214.88818658,  1832805.38022929,
+        1842391.954946  ,  1851974.58929458,  1861553.26020027,
+        1871127.94455558,  1880698.61922005,  1890265.26102013,
+        1899827.846749  ,  1909386.35316637,  1918940.75699834,
+        1928491.03493724,  1938037.16364142,  1947579.11973511,
+        1957116.87980824])
+
+In [295]: nf.x[0][0] 
+Out[295]: -1957115.8619048707
+
+In [296]: nf.y[0][nf.shape[1]/2] 
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+
+/home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/netcdf_global_ocean_export.py in <module>()
+----> 1 
+      2 
+      3 
+      4 
+      5 
+
+AttributeError: NcomNetcdf instance has no attribute 'shape'
+
+In [297]: nf.y[0][nf.y.shape[1]/2]
+Out[297]: -1388438.9846982497
+
+In [298]: nf.y[-1][0] 
+Out[298]: 1576504.3239779926
+
+In [299]: self = nf 
+
+In [300]:     xmin = self.x[0][0]
+   .....:     xmax = self.x[0][-1]
+   .....:     ymin = self.y[0][self.y.shape[1]/2]
+   .....:     ymax = self.y[-1][0] 
+   .....:  
+
+In [301]: deltay = int(np.ceil(abs(ymax-ymin)/abs(nf.y[-1][nf.y.shape[1]/2]-nf.y[-2][nf.y.shape[1]/2])))
+
+In [302]: deltay 
+Out[302]: 211
+
+In [303]: nf.y.shape 
+Out[303]: (200, 400)
+
+In [304]: nf.y[-1][nf.y.shape[1]/2]-nf.y[-2][nf.y.shape[1]/2] 
+Out[304]: 14062.722252810374
+
+In [305]: deltay 
+Out[305]: 211
+
+In [306]: ymax 
+Out[306]: 1576504.3239779926
+
+In [307]: abs(ymax-ymin) 
+Out[307]: 2964943.3086762424
+
+In [308]: abs(ymax-ymin)/1.4e4 
+Out[308]: 211.78166490544589
+
+In [309]: abs(xmax-xmin) 
+Out[309]: 3914232.7417131118
+
+In [310]: abs(xmax-xmin)/6.4e3 
+Out[310]: 611.59886589267376
+
+In [311]: nf.u.shape 
+Out[311]: (25, 200, 400)
+
+In [312]: gridx,gridy = mgrid[xmin:xmax:600j,ymin:ymax:220j] 
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+
+/home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/netcdf_global_ocean_export.py in <module>()
+----> 1 
+      2 
+      3 
+      4 
+      5 
+
+NameError: name 'mgrid' is not defined
+
+In [313]: gridx,gridy = np.mgrid[xmin:xmax:600j,ymin:ymax:220j]
+ 
+In [314]: np.reshape? 
+Type:             function
+Base Class:       <type 'function'>
+String Form:   <function reshape at 0x97d11ec>
+Namespace:        Interactive
+File:             /usr/lib/pymodules/python2.7/numpy/core/fromnumeric.py
+Definition:       np.reshape(a, newshape, order='C')
+Docstring:
+    Gives a new shape to an array without changing its data.
+    
+    Parameters
+    ----------
+    a : array_like
+        Array to be reshaped.
+    newshape : int or tuple of ints
+        The new shape should be compatible with the original shape. If
+        an integer, then the result will be a 1-D array of that length.
+        One shape dimension can be -1. In this case, the value is inferred
+        from the length of the array and remaining dimensions.
+    order : {'C', 'F'}, optional
+        Determines whether the array data should be viewed as in C
+        (row-major) order or FORTRAN (column-major) order.
+    
+    Returns
+    -------
+    reshaped_array : ndarray
+        This will be a new view object if possible; otherwise, it will
+        be a copy.
+    
+    
+    See Also
+    --------
+    ndarray.reshape : Equivalent method.
+    
+    Notes
+    -----
+    
+    It is not always possible to change the shape of an array without
+    copying the data. If you want an error to be raise if the data is copied,
+    you should assign the new shape to the shape attribute of the array::
+    
+     >>> a = np.zeros((10, 2))
+     # A transpose make the array non-contiguous
+     >>> b = a.T
+     # Taking a view makes it possible to modify the shape without modiying the
+     # initial object.
+     >>> c = b.view()
+     >>> c.shape = (20)
+     AttributeError: incompatible shape for a non-contiguous array
+    
+    
+    Examples
+    --------
+    >>> a = np.array([[1,2,3], [4,5,6]])
+    >>> np.reshape(a, 6)
+    array([1, 2, 3, 4, 5, 6])
+    >>> np.reshape(a, 6, order='F')
+    array([1, 4, 2, 5, 3, 6])
+    
+    >>> np.reshape(a, (3,-1))       # the unspecified value is inferred to be 2
+    array([[1, 2],
+           [3, 4],
+           [5, 6]])
+
+In [315]: z = np.reshape( nf.u[0], nf.u[0].shape[0]*nf.u[0].shape[1]) 
+
+In [316]: z.shape 
+Out[316]: (80000,)
+
+In [317]: def get_points(x,y):
+   .....:       points = []
+   .....:   for i in x.shape[0]:
+   .....:         for j in x.shape[1]:
+   .....:           points.append( (x[i][j],y[i][j]) )
+   .....:   return points 
+   .....:  
+
+In [318]: int_u = griddata( get_points(nf.x,nf.y), z, (grid 
+grid_x    grid_y    griddata  gridx     gridy     
+
+In [318]: int_u = griddata( get_points(nf.x,nf.y), z, (gridx,gridy), method='linear') 
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+
+/home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/netcdf_global_ocean_export.py in <module>()
+----> 1 
+      2 
+      3 
+      4 
+      5 
+
+/home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/netcdf_global_ocean_export.py in get_points(x, y)
+      1 
+      2 
+----> 3 
+      4 
+      5 
+
+TypeError: 'int' object is not iterable
+
+In [319]: def get_points(x,y):
+   .....:       points = []
+   .....:   for i in range(x.shape[0]):
+   .....:         for j in range(x.shape[1]):
+   .....:           points.append( (x[i][j],y[i][j]) )
+   .....:   return points 
+   .....:  
+
+In [320]: int_u = griddata( get_points(nf.x,nf.y), z, (gridx,gridy), method='linear') 
+ 
+In [321]: z1 = np.reshape( nf.v[0], nf.v[0].shape[0]*nf.u[0].shape[1])
+
+In [322]: plt.figure() 
+Out[322]: <matplotlib.figure.Figure object at 0x3fe1754c>
+
+In [323]: int_v = griddata( get_points(nf.x,nf.y), z1, (gridx,gridy), method='linear')
+ 
+In [324]: plt.quiver(nf.x,nf.y,int_u,int_v) 
+Out[324]: <matplotlib.quiver.Quiver object at 0x419a144c>
+
+In [325]: int_u.shape 
+Out[325]: (600, 220)
+
+In [326]: int_v.shape 
+Out[326]: (600, 220)
+
+In [327]: points = [] 
+
+In [328]:  
+
+In [329]: val_u = [] 
+
+In [330]: val_v = [] 
+
+In [331]: for i in range(nf.x.shape[0]): 
+   .....:     for j in range(nf.x.shape[1]): 
+   .....:         points.append( (x[i][j],y[i][j]) ) 
+   .....:  
+
+KeyboardInterrupt
+
+In [331]: for i in range(nf.x.shape[0]):
+    for j in range(nf.x.shape[1]):
+        points.append( (nf.x[i][j],nf.y[i][j]) ) 
+   .....:        val_u.append( nf.u[0][i][j] ) 
+------------------------------------------------------------
+IndentationError: unindent does not match any outer indentation level (<ipython console>, line 4)
+
+
+In [335]: for i in range(nf.x.shape[0]):
+    for j in range(nf.x.shape[1]):
+        points.append( (nf.x[i][j],nf.y[i][j]) ) 
+         val_u.append( nf.u[0][i][j] ) 
+------------------------------------------------------------
+IndentationError: unexpected indent (<ipython console>, line 4)
+
+
+In [339]: for i in range(nf.x.shape[0]):
+    for j in range(nf.x.shape[1]):
+        points.append( (nf.x[i][j],nf.y[i][j]) ) 
+        val_u.append( nf.u[0][i][j] )
+   .....:         val_v.append( nf.v[0][i][j] ) 
+   .....:          
+   .....:          
+ 
+In [343]: val_u.shape 
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+
+/home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/netcdf_global_ocean_export.py in <module>()
+----> 1 
+      2 
+      3 
+      4 
+      5 
+
+AttributeError: 'list' object has no attribute 'shape'
+
+In [344]: len(val_u) 
+Out[344]: 80000
+
+In [345]: del int_u 
+
+In [346]: int_u = griddata( points, val_u, (gridx,gridy), method='linear')
+ 
+In [347]: int_v = griddata( points, val_v, (gridx,gridy), method='linear') 
+ 
+In [348]: plt.cla() 
+
+In [349]: plt.qui 
+plt.quiver     plt.quiverkey  
+
+In [349]: plt.quiver(gridx,gridy,int_u,int_v) 
+Out[349]: <matplotlib.quiver.Quiver object at 0x3fe1776c>
+
+In [350]: for p in points: 
+   .....:     for p2 in points: 
+   .....:          
+
+KeyboardInterrupt
+
+In [350]: min = 0 
+
+In [352]: for p in points:
+    for p2 in points: 
+   .....:    
+
+KeyboardInterrupt
+
+In [353]: min = dist(po 
+points  pow     
+
+In [353]: min = dist(points[0],points[1]) 
+
+In [355]: min 
+Out[355]: 10125.908724804234
+
+In [356]: for p in points:
+    for p2 in points:
+   .....:         min = np.min(min,dist(p,p2)) 
+   .....:          
+   .....:          
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+
+/home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/netcdf_global_ocean_export.py in <module>()
+      1 
+      2 
+----> 3 
+      4 
+      5 
+
+/usr/lib/pymodules/python2.7/numpy/core/fromnumeric.pyc in amin(a, axis, out)
+   1860     except AttributeError:
+   1861         return _wrapit(a, 'min', axis, out)
+-> 1862     return amin(axis, out)
+   1863 
+   1864 
+
+ValueError: axis(=10125) out of bounds
+
+In [358]: for p in points:
+    for p2 in points:
+        min = np.min(min,dist(p,p2)) 
+   .....:          
+   .....:          
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+
+/home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/netcdf_global_ocean_export.py in <module>()
+      1 
+      2 
+----> 3 
+      4 
+      5 
+
+/usr/lib/pymodules/python2.7/numpy/core/fromnumeric.pyc in amin(a, axis, out)
+   1860     except AttributeError:
+   1861         return _wrapit(a, 'min', axis, out)
+-> 1862     return amin(axis, out)
+   1863 
+   1864 
+
+ValueError: axis(=10125) out of bounds
+
+In [361]: for i in range(len(points)) 
+------------------------------------------------------------
+   File "<ipython console>", line 1
+     for i in range(len(points))
+                                ^
+SyntaxError: invalid syntax
+
+
+In [362]: for i in range(len(points)): 
+   .....:     for j in range(len(points)): 
+   .....:         min = np.min( points[i],points[j] ) 
+   .....:          
+   .....:          
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+
+/home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/netcdf_global_ocean_export.py in <module>()
+      1 
+      2 
+----> 3 
+      4 
+      5 
+
+/usr/lib/pymodules/python2.7/numpy/core/fromnumeric.pyc in amin(a, axis, out)
+   1859         amin = a.min
+   1860     except AttributeError:
+-> 1861         return _wrapit(a, 'min', axis, out)
+   1862     return amin(axis, out)
+   1863 
+
+/usr/lib/pymodules/python2.7/numpy/core/fromnumeric.pyc in _wrapit(obj, method, *args, **kwds)
+     35     except AttributeError:
+     36         wrap = None
+---> 37     result = getattr(asarray(obj),method)(*args, **kwds)
+     38     if wrap:
+     39         if not isinstance(result, mu.ndarray):
+
+TypeError: an integer is required
+
+In [363]: for i in range(len(points)):
+    for j in range(len(points)):
+        min = np.min(dist( points[i],points[j] )) 
+   .....:          
+   .....:          
+
+KeyboardInterrupt
+
+In [365]: for i in range(len(points)):
+    for j in range(len(points)):
+        min = np.min(dist( points[i],points[j] ),min)
+   .....:          
+   .....:          
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+
+/home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/netcdf_global_ocean_export.py in <module>()
+      1 
+      2 
+----> 3 
+      4 
+      5 
+
+/usr/lib/pymodules/python2.7/numpy/core/fromnumeric.pyc in amin(a, axis, out)
+   1860     except AttributeError:
+   1861         return _wrapit(a, 'min', axis, out)
+-> 1862     return amin(axis, out)
+   1863 
+   1864 
+
+ValueError: axis(=10125) out of bounds
+
+In [369]: for i in range(len(points)):
+    for j in range(len(points)):
+        min = np.min(dist( points[i],points[j] ),min) 
+   .....:          
+   .....:          
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+
+/home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/netcdf_global_ocean_export.py in <module>()
+      1 
+      2 
+----> 3 
+      4 
+      5 
+
+/usr/lib/pymodules/python2.7/numpy/core/fromnumeric.pyc in amin(a, axis, out)
+   1860     except AttributeError:
+   1861         return _wrapit(a, 'min', axis, out)
+-> 1862     return amin(axis, out)
+   1863 
+   1864 
+
+ValueError: axis(=10125) out of bounds
+
+In [372]: min 
+Out[372]: 10125.908724804234
+
+In [373]: min = dist(points[0],points[1])
+
+In [374]: min 
+Out[374]: 10125.908724804234
+
+In [375]: for i in range(len(points)):
+    for j in range(len(points)):
+        min = np.min(dist( points[i],points[j] ),min) 
+   .....:          
+   .....:          
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+
+/home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/netcdf_global_ocean_export.py in <module>()
+      1 
+      2 
+----> 3 
+      4 
+      5 
+
+/usr/lib/pymodules/python2.7/numpy/core/fromnumeric.pyc in amin(a, axis, out)
+   1860     except AttributeError:
+   1861         return _wrapit(a, 'min', axis, out)
+-> 1862     return amin(axis, out)
+   1863 
+   1864 
+
+ValueError: axis(=10125) out of bounds
+
+In [378]: for i in range(len(points)):
+    for j in range(len(points)):
+        min = np.min((dist( points[i],points[j] ),min))
+   .....:          
+   .....:          
+ 
+^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[
+[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A 
+  
+ 
+ 
+^C^C
+KeyboardInterrupt
+ 
+In [381]:  
+ 
+In [382]: min 
+Out[382]: 0.0
+
+In [383]: len(points) 
+Out[383]: 80000
+
+In [384]: for i in range(len(points)): 
+   .....:     for jj in range(len(points)): 
+   .....:         min = i + jj 
+   .....:          
+   .....:          
+ 
+In [385]: u.shape 
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+
+/home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/netcdf_global_ocean_export.py in <module>()
+----> 1 
+      2 
+      3 
+      4 
+      5 
+
+NameError: name 'u' is not defined
+
+In [386]: nf. 
+nf._NcomNetcdf__set_cyl_basemap    nf.__module__                      nf.get_time_readable               nf.set_grid_region
+nf._NcomNetcdf__set_stere_basemap  nf.basemap                         nf.infile                          nf.u
+nf.__class__                       nf.dirname                         nf.interpolate_grid                nf.v
+nf.__doc__                         nf.export_nc                       nf.lat                             nf.x
+nf.__init__                        nf.export_txt                      nf.lon                             nf.y
+
+In [386]: nf. 
+nf._NcomNetcdf__set_cyl_basemap    nf.__module__                      nf.get_time_readable               nf.set_grid_region
+nf._NcomNetcdf__set_stere_basemap  nf.basemap                         nf.infile                          nf.u
+nf.__class__                       nf.dirname                         nf.interpolate_grid                nf.v
+nf.__doc__                         nf.export_nc                       nf.lat                             nf.x
+nf.__init__                        nf.export_txt                      nf.lon                             nf.y
+
+In [386]: nf.in 
+nf.infile            nf.interpolate_grid  
+
+In [386]: type(nf.infile) 
+Out[386]: <type 'NetCDFFile'>
+
+In [387]: t = nf.infile.variables['time'] 
+
+In [388]: t.shape 
+Out[388]: (25,)
+
+In [389]: t[1] - t[0],t[2] - t[1] 
+Out[389]: (3.0, 3.0)
+
+In [390]: t[0] 
+Out[390]: 100248.0
+
+In [391]: def get_points(x,y,t=[]):
+   .....:       points = []
+   .....:   for i in range(x.shape[0]):
+   .....:         for j in range(x.shape[1]):
+   .....:           if len(t) > 0:
+   .....:       for ii in range(len(t)):
+   .....:         points.append( (x[i][j], y[i][j], t[ii]) )
+   .....:       else:
+   .....:       points.append( (x[i][j],y[i][j]) )
+   .....:   return points
+   .....:  
+
+In [392]: points = get_points(nf.x,nf.y,t) 
+ 
+In [393]: points.shape 
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+
+/home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/netcdf_global_ocean_export.py in <module>()
+----> 1 
+      2 
+      3 
+      4 
+      5 
+
+AttributeError: 'list' object has no attribute 'shape'
+
+In [394]: len(points) 
+Out[394]: 2000000
+
+In [395]: len(points)/len(t) 
+Out[395]: 80000
+
+In [396]: len(points)/8000 
+Out[396]: 250
+
+In [397]: t.shape 
+Out[397]: (25,)
+
+In [398]: len(points)/80000 
+Out[398]: 25
+
+In [399]: test = np.array([[1,2,3],[4,5,6]) 
+------------------------------------------------------------
+   File "<ipython console>", line 1
+     test = np.array([[1,2,3],[4,5,6])
+                                     ^
+SyntaxError: invalid syntax
+
+
+In [400]: test = np.array([[1,2,3],[4,5,6]]) 
+
+In [401]: np.reshape(test,6) 
+Out[401]: array([1, 2, 3, 4, 5, 6])
+
+In [402]: len(points) 
+Out[402]: 2000000
+
+In [403]: points[0] 
+Out[403]: (-1957115.8619048707, -1049087.2505493308, 100248.0)
+
+In [404]: points[1] 
+Out[404]: (-1957115.8619048707, -1049087.2505493308, 100251.0)
+
+In [405]: (x[0][0],y[0][0],t[1])
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+
+/home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/netcdf_global_ocean_export.py in <module>()
+----> 1 
+      2 
+      3 
+      4 
+      5 
+
+NameError: name 'x' is not defined
+
+In [406]: (nf.x[0][0],nf.y[0][0],t[1])
+Out[406]: (-1957115.8619048707, -1049087.2505493308, 100251.0)
+
+In [407]: points[1] 
+Out[407]: (-1957115.8619048707, -1049087.2505493308, 100251.0)
+
+In [408]: points[21] 
+Out[408]: (-1957115.8619048707, -1049087.2505493308, 100311.0)
+
+In [409]: points[22]
+Out[409]: (-1957115.8619048707, -1049087.2505493308, 100314.0)
+
+In [410]: len(t) 
+Out[410]: 25
+
+In [411]: points[25]
+Out[411]: (-1947578.1018317409, -1052488.0093309085, 100248.0)
+
+In [412]: points = get_points(nf.x,nf.y,t)
+ 
+In [413]: np.array(10) 
+Out[413]: array(10)
+
+In [414]: x = np.array(10)
+
+In [415]: x.shape 
+Out[415]: ()
+
+In [416]: def get_points(x,y,t=[-1]):
+   .....:       I = x.shape[0]
+   .....:   J = x.shape[1]
+   .....:   K = len(t)
+   .....:   points = np.zeros(I*J*K)
+   .....:   for k in range(K):
+   .....:         for i in range(I):
+   .....:           for j in range(J):
+   .....:       if len(t) > 1:
+   .....:           points[k*I*J + i*J + j] = ( (x[i][j], y[i][j], t[ii]) )
+   .....:       else:
+   .....:         points.append( (x[i][j],y[i][j]) )
+   .....:   return points 
+   .....:  
+
+In [417]: points = get_points(nf.x,nf.y,t) 
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+
+/home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/netcdf_global_ocean_export.py in <module>()
+----> 1 
+      2 
+      3 
+      4 
+      5 
+
+/home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/netcdf_global_ocean_export.py in get_points(x, y, t)
+      8 
+      9 
+---> 10 
+     11 
+     12 
+
+NameError: global name 'ii' is not defined
+
+In [418]: points = get_points(nf.x,nf.y,t) 
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+
+/home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/netcdf_global_ocean_export.py in <module>()
+----> 1 
+      2 
+      3 
+      4 
+      5 
+
+/home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/netcdf_global_ocean_export.py in get_points(x, y, t)
+      8 
+      9 
+---> 10 
+     11 
+     12 
+
+NameError: global name 'ii' is not defined
+
+In [419]: run netcdf_global_ocean_export.py 
+------------------------------------------------------------
+   File "netcdf_global_ocean_export.py", line 62
+     deltax =
+              ^
+SyntaxError: invalid syntax
+
+WARNING: Failure executing file: <netcdf_global_ocean_export.py>
+ 
+In [420]: def get_points(x,y,t=[-1]):
+   .....:       I = x.shape[0]
+   .....:   J = x.shape[1]
+   .....:   K = len(t)
+   .....:   points = np.zeros(I*J*K)
+   .....:   for k in range(K):
+   .....:         for i in range(I):
+   .....:           for j in range(J):
+   .....:       if len(t) > 1:
+   .....:           points[k*I*J + i*J + j] = ( (x[i][j], y[i][j], t[k]) )
+   .....:       else:
+   .....:         points.append( (x[i][j],y[i][j]) )
+   .....:   return points 
+   .....:  
+
+In [421]: points = get_points(nf.x,nf.y,t) 
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+
+/home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/netcdf_global_ocean_export.py in <module>()
+----> 1 
+      2 
+      3 
+      4 
+      5 
+
+/home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/netcdf_global_ocean_export.py in get_points(x, y, t)
+      8 
+      9 
+---> 10 
+     11 
+     12 
+
+ValueError: setting an array element with a sequence.
+
+In [422]: def get_points(x,y,t=[-1]):
+   .....:       I = x.shape[0]
+   .....:   J = x.shape[1]
+   .....:   K = len(t)
+   .....:   points = [None]*I*J*K
+   .....:   for k in range(K):
+   .....:         for i in range(I):
+   .....:           for j in range(J):
+   .....:       if len(t) > 1:
+   .....:           points[k*I*J + i*J + j] = ( (x[i][j], y[i][j], t[k]) )
+   .....:       else:
+   .....:         points.append( (x[i][j],y[i][j]) )
+   .....:   return points 
+   .....:  
+
+In [423]: points = get_points(nf.x,nf.y,t) 
+ 
+In [424]: run netcdf_global_ocean_export.py
+------------------------------------------------------------
+   File "netcdf_global_ocean_export.py", line 62
+     deltax =
+              ^
+SyntaxError: invalid syntax
+
+WARNING: Failure executing file: <netcdf_global_ocean_export.py>
+
+In [425]: run netcdf_global_ocean_export.py 
+ 
+In [426]: run netcdf_global_ocean_export.py
+
+In [427]: points = get_points(nf.x,nf.y,t)
+ 
+In [428]: points[0] 
+
+In [429]: points[0] 
+
+In [430]: points[1] 
+
+In [431]: run netcdf_global_ocean_export.py
+
+In [432]: points = get_points(nf.x,nf.y,t)
+ 
+In [433]: len(points) 
+Out[433]: 4000000
+
+In [434]: points[0] 
+
+In [435]: print points[0] 
+None
+
+In [436]: run netcdf_global_ocean_export.py
+
+In [437]: points = get_points(nf.x,nf.y,t)
+ 
+In [438]: len(points) 
+Out[438]: 2000000
+
+In [439]: points[0] 
+Out[439]: (-1957115.8619048707, -1049087.2505493308, 100248.0)
+
+In [440]: gridx 
+Out[440]: 
+array([[-1957115.86190487, -1957115.86190487, -1957115.86190487, ...,
+        -1957115.86190487, -1957115.86190487, -1957115.86190487],
+       [-1950581.24964825, -1950581.24964825, -1950581.24964825, ...,
+        -1950581.24964825, -1950581.24964825, -1950581.24964825],
+       [-1944046.63739164, -1944046.63739164, -1944046.63739164, ...,
+        -1944046.63739164, -1944046.63739164, -1944046.63739164],
+       ..., 
+       [ 1944047.65529501,  1944047.65529501,  1944047.65529501, ...,
+         1944047.65529501,  1944047.65529501,  1944047.65529501],
+       [ 1950582.26755162,  1950582.26755162,  1950582.26755162, ...,
+         1950582.26755162,  1950582.26755162,  1950582.26755162],
+       [ 1957116.87980824,  1957116.87980824,  1957116.87980824, ...,
+         1957116.87980824,  1957116.87980824,  1957116.87980824]])
+
+In [441]: points = get_points(nf.x,nf.y,t)
+ 
+In [442]: int_u = griddata(points,u,(t,gridx,gridy),method='linear') 
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+
+/home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/netcdf_global_ocean_export.py in <module>()
+----> 1 
+      2 
+      3 
+      4 
+      5 
+
+NameError: name 'u' is not defined
+
+In [443]: int_u = griddata(points,nf.u,(t,gridx,gridy),method='linear')
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+
+/home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/netcdf_global_ocean_export.py in <module>()
+----> 1 
+      2 
+      3 
+      4 
+      5 
+
+/usr/local/lib/python2.7/dist-packages/scipy/interpolate/ndgriddata.pyc in griddata(points, values, xi, method, fill_value)
+    180         return ip(xi)
+    181     elif method == 'linear':
+--> 182         ip = LinearNDInterpolator(points, values, fill_value=fill_value)
+    183         return ip(xi)
+    184     elif method == 'cubic' and ndim == 2:
+
+/usr/local/lib/python2.7/dist-packages/scipy/interpolate/interpnd.so in interpnd.LinearNDInterpolator.__init__ (scipy/interpolate/interpnd.c:2504)()
+    189 
+    190 
+--> 191 
+    192 
+    193 
+
+/usr/local/lib/python2.7/dist-packages/scipy/interpolate/interpnd.so in interpnd.NDInterpolatorBase.__init__ (scipy/interpolate/interpnd.c:1192)()
+     61 
+     62 
+---> 63 
+     64 
+     65 
+
+/usr/local/lib/python2.7/dist-packages/scipy/interpolate/interpnd.so in interpnd.NDInterpolatorBase._check_init_shape (scipy/interpolate/interpnd.c:1579)()
+     91 
+     92 
+---> 93 
+     94 
+     95 
+
+ValueError: different number of values and points
+
+In [444]: u.shape 
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+
+/home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/netcdf_global_ocean_export.py in <module>()
+----> 1 
+      2 
+      3 
+      4 
+      5 
+
+NameError: name 'u' is not defined
+
+In [445]: nf.u.shape 
+Out[445]: (25, 200, 400)
+
+In [446]: 25*400*200 
+Out[446]: 2000000
+
+In [447]: len(points) 
+Out[447]: 2000000
+
+In [448]: int_u = griddata(points,nf.u,(t,gridx,gridy),method='linear') 
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+
+/home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/netcdf_global_ocean_export.py in <module>()
+----> 1 
+      2 
+      3 
+      4 
+      5 
+
+/usr/local/lib/python2.7/dist-packages/scipy/interpolate/ndgriddata.pyc in griddata(points, values, xi, method, fill_value)
+    180         return ip(xi)
+    181     elif method == 'linear':
+--> 182         ip = LinearNDInterpolator(points, values, fill_value=fill_value)
+    183         return ip(xi)
+    184     elif method == 'cubic' and ndim == 2:
+
+/usr/local/lib/python2.7/dist-packages/scipy/interpolate/interpnd.so in interpnd.LinearNDInterpolator.__init__ (scipy/interpolate/interpnd.c:2504)()
+    189 
+    190 
+--> 191 
+    192 
+    193 
+
+/usr/local/lib/python2.7/dist-packages/scipy/interpolate/interpnd.so in interpnd.NDInterpolatorBase.__init__ (scipy/interpolate/interpnd.c:1192)()
+     61 
+     62 
+---> 63 
+     64 
+     65 
+
+/usr/local/lib/python2.7/dist-packages/scipy/interpolate/interpnd.so in interpnd.NDInterpolatorBase._check_init_shape (scipy/interpolate/interpnd.c:1579)()
+     91 
+     92 
+---> 93 
+     94 
+     95 
+
+ValueError: different number of values and points
+
+In [449]: pdb on 
+Automatic pdb calling has been turned ON
+
+In [450]: int_u = griddata(points,nf.u,(t,gridx,gridy),method='linear') 
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+
+/home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/netcdf_global_ocean_export.py in <module>()
+----> 1 
+      2 
+      3 
+      4 
+      5 
+
+/usr/local/lib/python2.7/dist-packages/scipy/interpolate/ndgriddata.pyc in griddata(points, values, xi, method, fill_value)
+    180         return ip(xi)
+    181     elif method == 'linear':
+--> 182         ip = LinearNDInterpolator(points, values, fill_value=fill_value)
+    183         return ip(xi)
+    184     elif method == 'cubic' and ndim == 2:
+
+/usr/local/lib/python2.7/dist-packages/scipy/interpolate/interpnd.so in interpnd.LinearNDInterpolator.__init__ (scipy/interpolate/interpnd.c:2504)()
+    189 
+    190 
+--> 191 
+    192 
+    193 
+
+/usr/local/lib/python2.7/dist-packages/scipy/interpolate/interpnd.so in interpnd.NDInterpolatorBase.__init__ (scipy/interpolate/interpnd.c:1192)()
+     61 
+     62 
+---> 63 
+     64 
+     65 
+
+/usr/local/lib/python2.7/dist-packages/scipy/interpolate/interpnd.so in interpnd.NDInterpolatorBase._check_init_shape (scipy/interpolate/interpnd.c:1579)()
+     91 
+     92 
+---> 93 
+     94 
+     95 
+
+ValueError: different number of values and points
+> /home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/interpnd.pyx(93)interpnd.NDInterpolatorBase._check_init_shape (scipy/interpolate/interpnd.c:1579)()
+
+ipdb> q 
+ 
+In [451]: pdb off 
+Automatic pdb calling has been turned OFF
+
+In [452]: vals = u.reshape(nf.u,25*200*400) 
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+
+/home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/netcdf_global_ocean_export.py in <module>()
+----> 1 
+      2 
+      3 
+      4 
+      5 
+
+NameError: name 'u' is not defined
+
+In [453]: vals = np.reshape(nf.u,25*200*400)
+ 
+In [454]: len(vals) 
+Out[454]: 2000000
+
+In [455]: vals[0] 
+Out[455]: 0.42400002
+
+In [456]: nf.u[0][0][0] 
+Out[456]: 0.42400002
+
+In [457]: int_u = griddata(points,val 
+val_u  val_v  vals   
+
+In [457]: int_u = griddata(points,vals,(t,gridx,gridy),method='linear')
+QH7074 qhull warning: more than 16777215 ridges.  ID field overflows and two ridges
+may have the same identifier.  Otherwise output ok.
+QH6080 qhull error (qh_memalloc): insufficient memory to allocate short memory buffer (65536 bytes)
+
+While executing:  | qhull d Qz Qbb Qt
+Options selected for Qhull 2010.1 2010/01/14:
+  run-id 1610854383  delaunay  Qz-infinity-point  Qbbound-last  Qtriangulate
+  _pre-merge  _zero-centrum  Pgood  _max-width 3.9e+06  Error-roundoff 7.6e-09
+  _one-merge 6.9e-08  _near-inside 3.4e-07  Visible-distance 4.6e-08
+  U-coplanar-distance 4.6e-08  Width-outside 9.2e-08  _wide-facet 2.8e-07
+  _narrow-hull 3.5e-10
+Last point added to hull was p119322.  Last merge was #5090422.
+
+At error exit:
+ 
+Delaunay triangulation by the convex hull of 2000001 points in 4-d:
+
+  Number of input sites and at-infinity: 938177
+  Total number of nearly incident points: 1061824
+  Number of Delaunay regions: 0
+  Number of non-simplicial Delaunay regions: 1210383
+
+Statistics for:  | qhull d Qz Qbb Qt
+
+  Number of points processed: 938177
+  Number of hyperplanes created: 14700218
+  Number of facets in hull: 2712896
+  Number of distance tests for qhull: 390919542
+  Number of distance tests for merging: -769918229
+  Number of distance tests for checking: 0
+  Number of merged facets: 5444592
+  Maximum distance of merged point above facet: 1.3e-07 (1.7x)
+  Maximum distance of merged vertex below facet: -2.6e-07 (3.4x)
+
+
+precision problems (corrected unless 'Q0' or an error)
+      7 flipped facets
+3868318 coplanar horizon facets for new vertices
+    392 degenerate hyperplanes recomputed with gaussian elimination
+    781 nearly singular or axis-parallel hyperplanes
+    389 zero divisors during back substitute
+    389 zero divisors during gaussian elimination
+---------------------------------------------------------------------------
+RuntimeError                              Traceback (most recent call last)
+
+/home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/netcdf_global_ocean_export.py in <module>()
+----> 1 
+      2 
+      3 
+      4 
+      5 
+
+/usr/local/lib/python2.7/dist-packages/scipy/interpolate/ndgriddata.pyc in griddata(points, values, xi, method, fill_value)
+    180         return ip(xi)
+    181     elif method == 'linear':
+--> 182         ip = LinearNDInterpolator(points, values, fill_value=fill_value)
+    183         return ip(xi)
+    184     elif method == 'cubic' and ndim == 2:
+
+/usr/local/lib/python2.7/dist-packages/scipy/interpolate/interpnd.so in interpnd.LinearNDInterpolator.__init__ (scipy/interpolate/interpnd.c:2524)()
+    190 
+    191 
+--> 192 
+    193 
+    194 
+
+/usr/local/lib/python2.7/dist-packages/scipy/spatial/qhull.so in scipy.spatial.qhull.Delaunay.__init__ (scipy/spatial/qhull.c:4030)()
+    915 
+    916 
+--> 917 
+    918 
+    919 
+
+/usr/local/lib/python2.7/dist-packages/scipy/spatial/qhull.so in scipy.spatial.qhull._construct_delaunay (scipy/spatial/qhull.c:1269)()
+    168 
+    169 
+--> 170 
+    171 
+    172 
+
+RuntimeError: Qhull error
+ 
+In [458]:  
+ 
+In [459]: dir 
+Out[459]: <built-in function dir>
+
+In [460]: whos 
+Variable      Type                   Data/Info
+----------------------------------------------
+Basemap       type                   <class 'mpl_toolkits.basemap.Basemap'>
+NcomNetcdf    classobj               __main__.NcomNetcdf
+NcomTime      type                   <class '__main__.NcomTime'>
+R             float                  6378100.0
+arccos        ufunc                  <ufunc 'arccos'>
+ax            AxesSubplot            Axes(0.125,0.206012;0.775x0.587975)
+cos           ufunc                  <ufunc 'cos'>
+datetime      type                   <type 'datetime.datetime'>
+deltax        int                    809
+deltay        int                    211
+dist          function               <function dist at 0x4828009c>
+get_points    function               <function get_points at 0x4828095c>
+grid_x        ndarray                1000x500: 500000 elems, type `float64`, 4000000 bytes (3 Mb)
+grid_y        ndarray                1000x500: 500000 elems, type `float64`, 4000000 bytes (3 Mb)
+griddata      function               <function griddata at 0x3fe161b4>
+gridx         ndarray                600x220: 132000 elems, type `float64`, 1056000 bytes (1 Mb)
+gridy         ndarray                600x220: 132000 elems, type `float64`, 1056000 bytes (1 Mb)
+ht            float64                3.14438049364
+i             int                    79999
+int_u         ndarray                600x220: 132000 elems, type `float64`, 1056000 bytes (1 Mb)
+int_v         ndarray                600x220: 132000 elems, type `float64`, 1056000 bytes (1 Mb)
+interp_u      ndarray                1000x500: 500000 elems, type `float64`, 4000000 bytes (3 Mb)
+j             int                    32497
+jj            int                    79999
+mask          ndarray                200x400: 80000 elems, type `bool`, 80000 bytes
+min           int                    159998
+nc            module                 <module 'Scientific.IO.Ne<...>cientific/IO/NetCDF.pyc'>
+nf            __main__.NcomNetcdf    <__main__.NcomNetcdf instance at 0x10a925ec>
+np            module                 <module 'numpy' from '/us<...>n2.7/numpy/__init__.pyc'>
+os            module                 <module 'os' from '/usr/lib/python2.7/os.pyc'>
+p             tuple                  (-1957115.8619048707, -1049087.2505493308)
+p2            tuple                  (-1947578.1018317409, -1052488.0093309085)
+pi            float                  3.14159265359
+plt           module                 <module 'matplotlib.pyplo<...>7/matplotlib/pyplot.pyc'>
+^[[A^[[A^[[A^[[A^[[A^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[A^[[A^[[A^[[A^[[Apoints        list                   [(-1957115.8619048707, -1<...>04.32397799
+12, 100320.0)]
+rotate_pts    function               <function rotate_pts at 0x48280924>
+self          __main__.NcomNetcdf    <__main__.NcomNetcdf instance at 0x10a925ec>
+sin           ufunc                  <ufunc 'sin'>
+stereo_proj   function               <function stereo_proj at 0x3668dd4c>
+sys           module                 <module 'sys' (built-in)>
+t             NetCDFVariable         <NetCDFVariable object at 0x36480200>
+test          ndarray                2x3: 6 elems, type `int32`, 24 bytes
+test_len      function               <function test_len at 0x482801b4>
+timedelta     type                   <type 'datetime.timedelta'>
+tzinfo        type                   <type 'datetime.tzinfo'>
+val_u         list                   [0.42400002, 0.44200003, <...>02, -0.012, 0.0020000001]
+val_v         list                   [-0.15400001, -0.18200001<...>.0060000001, 0.039000001]
+vals          ndarray                2000000: 2000000 elems, type `float32`, 8000000 bytes (7 Mb)
+wd            float64                1.01790337248
+x             ndarray                : 1 elems, type `int32`, 4 bytes
+xmax          float64                1957116.87981
+xmin          float64                -1957115.8619
+xx            ndarray                200x400: 80000 elems, type `float64`, 640000 bytes (625 kb)
+ymax          float64                1576504.32398
+ymid          float64                -0.41421233018
+ymid0         float64                -2.35670136349
+ymid1         float64                -5.50108185712
+ymin          float64                -1388438.9847
+yy            ndarray                200x400: 80000 elems, type `float64`, 640000 bytes (625 kb)
+z             ndarray                80000: 80000 elems, type `float32`, 320000 bytes (312 kb)
+z1            ndarray                80000: 80000 elems, type `float32`, 320000 bytes (312 kb)
+
+In [461]: del(xx) 
+ 
+In [462]: del(yy) 
+ 
+In [463]: del(z) 
+
+In [464]: del(z1) 
+ 
+In [465]: who 
+Basemap NcomNetcdf      NcomTime        R       arccos  ax      cos     datetime        deltax
+deltay  dist    get_points      grid_x  grid_y  griddata        gridx   gridy   ht
+i       int_u   int_v   interp_u        j       jj      mask    min     nc
+nf      np      os      p       p2      pi      plt     points  rotate_pts
+self    sin     stereo_proj     sys     t       test    test_len        timedelta       tzinfo
+val_u   val_v   vals    wd      x       xmax    xmin    ymax    ymid
+ymid0   ymid1   ymin
+
+In [466]: del(tzinfo) 
+ 
+In [467]: nf.expo 
+nf.export_nc   nf.export_txt  
+
+In [467]: nf.export_txt() 
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+
+/home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/netcdf_global_ocean_export.py in <module>()
+----> 1 
+      2 
+      3 
+      4 
+      5 
+
+/home/kjoyce/2011_summer/LCS_project/ocean_data/AKNS/netcdf_global_ocean_export.py in export_txt(self)
+    100     T = self.infile.variables['time'].getValue()
+    101     return [NcomTime(int(x)) for x in T]
+--> 102 
+    103   def export_txt(self):
+    104     try:
+
+NameError: global name 'get_time_readable' is not defined
+
+In [468]: quit() 
+Do you really want to exit ([y]/n)? y 
+  

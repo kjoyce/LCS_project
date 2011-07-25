@@ -152,7 +152,7 @@ class NcomNetcdf:
 #at[-1])
     
     self.x,self.y = self.basemap(*np.meshgrid(self.lon,self.lat))
-#    debug_here()
+    debug_here()
 
   def get_time_readable(self):
     T = self.infile.variables['time'].getValue()
